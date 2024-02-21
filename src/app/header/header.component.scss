@@ -1,0 +1,33 @@
+$color_1: #627bb8;
+$color_2: rgb(86, 86, 86);
+$background-color_1: #F5F7F6;
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 70px;
+	background-color: $background-color_1;
+}
+
+
+.icon {
+	align-items: start;
+	color: $color_1;
+	margin-top: 20px;
+}
+
+.right-nav {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	mat-icon {
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+mat-icon {
+	font-size: 24px;
+	color: $color_2;
+}

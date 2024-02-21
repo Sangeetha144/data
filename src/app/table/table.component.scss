@@ -1,0 +1,13 @@
+$color_1: white;
+$background-color_1: black;
+
+mat-card {
+	margin: 2%;
+}
+button {
+	margin: 2px;
+}
+th {
+	background-color: $background-color_1 !important;
+	color: $color_1;
+}

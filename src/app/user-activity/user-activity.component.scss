@@ -1,0 +1,74 @@
+/* user-activity.component.scss */
+#container{
+    display: flex;
+    margin-top:30px;
+ 
+}
+#donutchart1{
+    width: 200px;
+    height: 300px;
+ 
+}
+#donutchart2 {
+  width: 200px;
+  height: 300px;
+
+ 
+ 
+}
+
+// If you want to apply specific styles to each chart individually, you can use their IDs:
+ 
+ 
+mat-card{
+    background-color: rgb(244, 240, 240);
+}
+ 
+h3{
+    font-weight: bold;
+    color: rgb(5, 97, 137);
+}
+.treemap-card {
+    width: 300px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    /* Adjust margin as needed */
+    position: relative;
+   
+ 
+  }
+  .treemap{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    right: -15px;
+
+}
+  .ch1{
+    height: 300px;
+    width: 313px;
+    
+    position: relative;
+    right: -130px;
+  
+  }
+  .ch2{
+    height: 300px;
+    width: 313px;
+    position: relative;
+    right: -260px;
+  
+  }
+  .funnel{
+  
+    height: 300px;
+    margin-left: 390px;
+  }
+  #heatmap-chart{
+margin-left: 50px;
+margin-top: 15px;
+  }
+.loading-spinner-container{
+  position: relative;
+  bottom: -230px;
+  right: -640px;
+}

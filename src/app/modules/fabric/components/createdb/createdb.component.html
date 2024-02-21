@@ -1,0 +1,36 @@
+
+<div style="width:300px;padding:20px;height:475px">
+    <mat-icon style="margin-left: 270px;margin-top: 2px; cursor: pointer;" (click)="closePopup()">highlight_off</mat-icon>
+    <div id="con">
+    <h1 mat-dialog-title class="title"><mat-icon>server</mat-icon>Create Database</h1>
+    <div mat-dialog-content>
+        <form class="example-form">
+            <h3>Name of the Database</h3>
+            <mat-form-field class="example-full-width" appearance="outline">
+              <mat-label>Database Name</mat-label>
+              <input matInput placeholder="Ex:Users" >
+            </mat-form-field>
+            </form>
+            <section class="example-section" [formGroup]="roles">
+                <h3>Role</h3>
+                <p><mat-checkbox  formControlName="organization">Organization Administrator</mat-checkbox></p>
+                <p><mat-checkbox formControlName="account">Account Administrator</mat-checkbox></p>
+                <p><mat-checkbox formControlName="security">Security Administrator</mat-checkbox></p>
+                <p><mat-checkbox formControlName="super">Super Administrator</mat-checkbox></p>
+                
+                <p id="customrole"> <mat-icon style="color:green">add</mat-icon>Create custom Role</p>
+              </section>
+    </div>
+    </div>
+    <div mat-dialog-actions>
+        <div class="button-group">
+            <button type="button" class="btn-cancel">
+                <mat-icon>highlight_off</mat-icon><span>Clear</span>
+            </button>
+            <button type="button" class="btn-share">
+                <mat-icon>add</mat-icon><span>Create</span>
+            </button>
+        </div>
+    </div>
+</div>
+ 

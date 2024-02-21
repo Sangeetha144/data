@@ -1,0 +1,202 @@
+{
+  "customer": [
+    {
+      "id": "1",
+      "name": "Akila",
+      "email": "akila@in.com"
+    },
+    {
+      "id": "2",
+      "name": "Reshma",
+      "email": "reshma@in.com"
+    },
+    {
+      "id": "3",
+      "name": "Sangeetha",
+      "email": "sangeetha@in.com"
+    },
+    {
+      "id": "4",
+      "name": "Ratchu",
+      "email": "ratchu@in.com"
+    },
+    {
+      "id": "5",
+      "name": "Deepa",
+      "email": "Deepa@in.com"
+    },
+    {
+      "id": "6",
+      "name": "Chibi",
+      "email": "chib@in.com"
+    },
+    {
+      "id": "7",
+      "name": "Peter",
+      "email": "peter@in.com"
+    },
+    {
+      "id": "8",
+      "name": "Kanmani",
+      "email": "kanmani@in.com"
+    },
+    {
+      "id": "9",
+      "name": "kaushika",
+      "email": "kaushika@in.com"
+    },
+    {
+      "id": "10",
+      "name": "Harini",
+      "email": "harini@in.com"
+    },
+    {
+      "id": "11",
+      "name": "Anu",
+      "email": "anu@in.com"
+    },
+    {
+      "id": "12",
+      "name": "yuwin",
+      "email": "yuwin@in.com"
+    },
+    {
+      "id": "13",
+      "name": "jannani",
+      "email": "janani@in.com"
+    },
+    {
+      "id": "14",
+      "name": "lakshmi",
+      "email": "lakshmi@in.com"
+    },
+    {
+      "id": "15",
+      "name": "Priya",
+      "email": "priya@in.com"
+    },
+    {
+      "id": "16",
+      "name": "Raji",
+      "email": "raji@in.com"
+    },
+    {
+      "id": "17",
+      "name": "Meera",
+      "email": "meera@in.com"
+    },
+    {
+      "id": "18",
+      "name": "Hari",
+      "email": "hari@in.com"
+    },
+    {
+      "id": "19",
+      "name": "Arun",
+      "email": "arun@in.com"
+    },
+    {
+      "id": "20",
+      "name": "Karthi",
+      "email": "karthi@in.com"
+    },
+    {
+      "id": "21",
+      "name": "Kathir",
+      "email": "kathir@in.com"
+    },
+    {
+      "id": "22",
+      "name": "Ganesh",
+      "email": "ganesh@in.com"
+    },
+    {
+      "id": "23",
+      "name": "Sathya",
+      "email": "sathya@in.com"
+    },
+    {
+      "id": "24",
+      "name": "Pooja",
+      "email": "pooja@in.com"
+    },
+    {
+      "id": "25",
+      "name": "Bharathi",
+      "email": "bharathi@in.com"
+    },
+    {
+      "id": "26",
+      "name": "Mani",
+      "email": "mani@in.com"
+    },
+    {
+      "id": "27",
+      "name": "Nithya",
+      "email": "nithya@in.com"
+    }
+  ],
+  "user": [
+    {
+      "activeUser": "1000",
+      "id": "4e34"
+    },
+    {
+      "mostUsedProduct": "Vendormate",
+      "id": "48e8"
+    },
+    {
+      "activeProduct": "5",
+      "id": "7bdd"
+    }
+  ],
+  "share": [
+    {
+      "id": "57b2",
+      "dataShare": "Data Share Name 2",
+      "objectShare": "Object Share Name 1",
+      "account": "Account 2"
+    },
+    {
+      "id": "f666",
+      "dataShare": "Data Share Name 2",
+      "objectShare": "Object Share Name 2",
+      "account": "Account 2"
+    }
+  ],
+  "alternateDataPartners": [
+    {
+      "name": "Tables",
+      "items": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ]
+    },
+    {
+      "name": "Views",
+      "items": [
+        "Five",
+        "Six",
+        "Seven",
+        "Eight"
+      ]
+    }
+  ],
+  "project":[
+    {
+      "p1":"Vendormate",
+      
+        "p2":"Corex"
+      
+    }
+      
+  ],
+  "Vendormate":[
+    {
+      "d1":"Alternate Data Partners",
+      "d2":"database1"
+    }
+  ]
+}

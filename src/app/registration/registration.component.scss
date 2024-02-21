@@ -1,0 +1,181 @@
+.registration {
+    background-color: gainsboro;
+    width: 500px;
+    height: 470px;
+  position: relative;
+  right: 260px;
+  
+  }
+  .logo{
+  margin-left: -72px;
+
+  }
+  
+  
+  .heading {
+    background: linear-gradient(to top right, #0a4a7a 45%, #f49f15 90%);
+    height: 60px;
+    width: 500px;
+    text-align: center;
+    padding-top: 15px;
+    color: white;
+ 
+  }
+  
+  .partneruser {
+    letter-spacing: 7px;
+  margin-top: -7px;
+  font-size: 22px;
+  line-height:30px;
+  font-weight: 400;
+  }
+  
+  #content {
+    justify-content: center;
+    padding-left: 13.5cm;
+  
+  }
+  
+  
+  
+  .btn {
+    background: linear-gradient(to top right, #02477e 45%, #49615f 90%);
+    border: none;
+    height: 40px;
+    width: 220px; /* Adjusted width for buttons */
+    color: #f9f9f9;
+    justify-content: center;
+    position: relative;
+    right:0.4mm;
+   top:-3mm;
+    /* Equal width for both buttons */
+   
+  }
+  
+  .btn-cancel {
+    color:white;
+    background-color:grey ;
+    height: 40px;
+    width: 220px; /* Adjusted width for buttons */
+    border: none;
+   font-weight: bold;
+    justify-content: center;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px;
+    border-radius: 5px;
+    left:-5mm;
+   top:-3mm;
+  }
+  
+  .icn {
+    color: linear-gradient(to top right, #0a4a7a 45%, #f49f15 90%);
+  }
+  
+  
+  
+  .name-fields {
+    display: flex;
+    justify-content:space-between;/* Places First Name and Last Name in the same line */
+  
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between; /* Align buttons evenly */
+
+  }
+  
+  .eye{
+    border:none;
+    background: transparent;
+
+  }
+  .eye mat-icon{
+    font-size: 20px;
+  }
+  
+  .login-link {
+    text-align:end;/* Center-align the login link */
+ margin-right: 20px;
+    color:#02477e;
+  }
+  mat-form-field{
+    height:68px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+  .registration {
+    width: 90%; /* Adjust as needed */
+    margin: auto; /* Center the form */
+  }
+  
+  .heading, .btn, .btn-cancel {
+    width: 100%;
+  }
+  
+  .btn, .btn-cancel {
+    margin-top: 10px;
+  }
+  
+  .frm {
+    padding-left: 10px;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .btn, .btn-cancel {
+    width: 100%;
+  }
+  
+  .name-fields {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .name-fields mat-form-field {
+    width: 100%;
+  }
+  }
+  
+  /* For all screen sizes (including larger screens) */
+  @media only screen and (min-width: 1px) {
+  .registration {
+    max-width: 500px; /* Set the maximum width */
+    margin: auto; /* Center the form */
+  }
+  
+  .heading, .btn, .btn-cancel {
+    width: 100%;
+  }
+  
+  .btn, .btn-cancel {
+    margin-top: 10px;
+  }
+  
+  .frm {
+    padding-left: 20px;
+  }
+  
+  .button-group {
+    justify-content: space-between; /* Align buttons evenly */
+    margin-top: 20px;
+  }
+  
+  .btn, .btn-cancel {
+    width: 220px; /* Adjust as needed */
+  }
+  
+  .name-fields {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .name-fields mat-form-field {
+    width: calc(50% - 5px); /* Adjust for gap between fields */
+  }
+  }
+  
+  

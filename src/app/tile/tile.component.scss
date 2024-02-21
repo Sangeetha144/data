@@ -1,0 +1,41 @@
+
+.card-container {
+    float:left;
+    position: relative;
+  top:20px;
+    left:300px;
+    margin: 20px;
+    }
+    
+    .example-card {
+      width:200px;
+      height: 120px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+     
+    }
+    
+     
+    h1 {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 5px;
+    }
+    
+    mat-card-content p {
+      text-align: center;
+      font-size: 15px;
+     
+    
+    }
+
+.pie{
+  margin-left: 500px;
+  margin-top: 20px;
+}
+ 

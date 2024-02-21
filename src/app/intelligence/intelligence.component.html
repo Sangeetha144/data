@@ -1,0 +1,85 @@
+<app-back></app-back>
+<div class="con">
+  <div class="parent">
+    <div id="select">
+      <form class="example-form">
+        <mat-form-field class="example-full-width" style="width: 200px">
+          <mat-label>Selected Product</mat-label>
+          <input matInput value="Vendormate" />
+        </mat-form-field>
+      </form>
+    </div>
+
+    <div class="autocomplete">
+      <form class="example-form">
+        <mat-form-field class="example-full-width" style="width: 200px">
+          <mat-label>Select Type</mat-label>
+          <input matInput [matAutocomplete]="auto" [formControl]="formcontrol" [value]="selectedOption" [(ngModel)]="selectedOption" />
+          <mat-icon class="icon" *ngIf="!selectedOption">keyboard_arrow_down</mat-icon >
+          <mat-autocomplete autoActiveFirstOption #auto (optionSelected)="optionSelected($event.option.value)">
+            <mat-option *ngFor="let item of filteroptions | async" [value]="item">
+              {{ item }}
+            </mat-option>
+          </mat-autocomplete>
+          <button *ngIf="selectedOption" matSuffix mat-icon-button (click)="clearFilter()">
+            <mat-icon class="iconn">clear</mat-icon>
+          </button>
+        </mat-form-field>
+      </form>
+    </div>
+
+    <div class="date">
+      <mat-form-field class="example-form-field" style="width: 200px">
+        <mat-label>From</mat-label>
+        <input
+          matInput
+          [matDatepicker]="fromDatePicker"
+          placeholder="From date"
+          name="fromDate"
+          [max]="maxDate"
+          [value]="yesterdayDate.toISOString().split('T')[0]"
+          (dateChange)="addEvent('change', $event)"
+          class="input"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="fromDatePicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #fromDatePicker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field class="example-form-field" style="width: 200px">
+        <mat-label>To</mat-label>
+        <input
+          matInput
+          [matDatepicker]="toDatePicker"
+          placeholder="To date"
+          name="toDate"
+          [min]="minDate"
+          [value]="date.value"
+          [max]="maxDate"
+        />
+        <mat-datepicker-toggle
+          matSuffix
+          [for]="toDatePicker"
+          class="date"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #toDatePicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary" (click)="onSubmit()">
+      Submit
+    </button>
+
+    <button mat-raised-button (click)="clearAll()" >Clear</button>
+  </div>
+
+  <div *ngIf="!submitted">
+    <app-line-chart [options]="selectedOption" ></app-line-chart>
+    <app-table></app-table>
+  </div>
+  <div *ngIf="showSpinner" class="spin">
+    <mat-spinner></mat-spinner>
+  </div>
+</div>

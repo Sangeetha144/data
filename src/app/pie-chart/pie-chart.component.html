@@ -1,0 +1,13 @@
+<div class="container">
+    <apx-chart 
+      [series]="series" 
+      [chart]="details" 
+      [labels]="labels" 
+      [title]="title" 
+      [colors]="colors"
+      (click)="handleSliceClick($event)"
+      [annotations]="chartAnnotations"
+    >
+    </apx-chart>
+  </div>
+  

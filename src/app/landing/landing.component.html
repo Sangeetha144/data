@@ -1,0 +1,41 @@
+<app-back></app-back>
+<div id="content">
+   <div class="heading">
+      <h1>Hello,{{username}}! What's Up for the day?</h1>
+       <p>Welcome to the Data Universe Platform! Explore our tailored offerings </p>
+       <p>constituting to your imperative data requirements without missing a beat</p>
+   </div>
+   <div class="image">
+       <img src="/assets/landingimages/Group 240.png">
+       <a routerLink="/tile"><div id="intelligence" class="icon" 
+         #tooltip="matTooltip"
+         matTooltip="DataIntelligence is a functionality helps to track single user activities"
+         matTooltipHideDelay="200"
+         matTooltipPosition='left'
+         matTooltipClass="basic-tooltip"
+         >
+         
+       </div></a>
+       <a ><div id="analytics" class="icon"
+         #tooltip="matTooltip"
+         matTooltip="DataAnalytics is a functionality which helps to analyze user activities"
+         matTooltipHideDelay="200"
+         matTooltipPosition='left'
+         matTooltipClass="basic-tooltip"
+         ></div></a>
+         <a routerLink="/fabric"><div id="fabric" class="icon"
+            #tooltip="matTooltip"
+            matTooltip="DataFabric is a functionality which helps to share data to others"
+            matTooltipHideDelay="200"
+            matTooltipPosition='right'
+            matTooltipClass="basic-tooltip"
+            ></div></a>
+            <a ><div id="observability" class="icon"
+               #tooltip="matTooltip"
+               matTooltip="DataObservability is a functionality helps to observe single user activities"
+               matTooltipHideDelay="200"
+               matTooltipPosition='right'
+               matTooltipClass="basic-tooltip"
+               ></div></a>
+   </div>
+</div>

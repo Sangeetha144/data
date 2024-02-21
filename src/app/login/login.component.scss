@@ -1,0 +1,83 @@
+ 
+
+#content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+    .intuser{
+    letter-spacing: 7px;
+    font-size: 22px;
+    margin-top: 2px;
+    font-weight:400;
+    text-transform: uppercase;
+
+    } 
+ 
+    .frm{
+        padding-left: 60px;
+        
+    }
+    .login{
+        background-color:gainsboro;
+        width: 400px;
+        height: 320px;
+    }
+    .btn{
+        background:linear-gradient(to top right, #02477e 45%, #49615f 90%);
+        border: none;
+        height: 40px;
+        width: 340px;
+        color:#f9f9f9;
+        justify-content: center;
+        
+       
+    }
+    .icn{
+        color:linear-gradient(to top right, #0a4a7a 45%, #f49f15 90%);
+    }
+    
+.reg-link {
+    text-align:end;/* Center-align the login link */
+  
+    padding: 5px;
+    color:#02477e;
+  }
+
+.heading {
+    background: linear-gradient(to top right, #0a4a7a 45%, #f49f15 90%);
+    height: 40px;
+    width: 400px;
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+  }
+  
+
+  
+  .frm {
+    padding-left: 30px;
+  }
+  
+
+  
+  
+  .icn {
+    color: linear-gradient(to top right, #0a4a7a 45%, #f49f15 90%);
+  }
+  
+  .reg-link {
+    text-align: end;
+    padding: 5px;
+    color: #02477e;
+  
+    @media screen and (max-width: 768px) {
+      text-align: center; /* Center-align on smaller screens */
+    }
+  }
+
+ 
+
+  

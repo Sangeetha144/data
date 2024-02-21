@@ -1,0 +1,90 @@
+ 
+#content {
+    position: relative;
+    background: linear-gradient(to top left, #ff9700 0%, #35afd7 57%);
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 584px;
+}
+ 
+.heading {
+
+    text-align: center;
+}
+h1{
+    padding-top:25px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+ p{
+    padding-top: 10px;
+    line-height: 2.5px;
+    letter-spacing: 2px;
+    font-size: 16px;
+ }
+.image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px; /* Adjust as needed */
+}
+ 
+img {
+    height: 400px;
+    width: 600px;
+}
+ 
+.icon {
+    position: absolute;
+    width: 130px;
+    height: 180px;
+    background-size: cover;
+    transition: background-image 0.8s ease-in-out;
+}
+ 
+#intelligence {
+    background-image: url('/assets/landingimages/Group\ 247.png');
+    top: -3px; /* Adjust as needed */
+    left: 360px; /* Adjust as needed */
+}
+ 
+#intelligence:hover {
+    background-image: url('/assets/landingimages/Group\ 246.png');
+}
+ 
+#analytics {
+    background-image: url('/assets/landingimages/Group\ 245.png');
+    top: 143px; /* Adjust as needed */
+    right: 890px; /* Adjust as needed */
+}
+ 
+#analytics:hover {
+    background-image: url('/assets/landingimages/Group\ 244.png');
+}
+ 
+#fabric {
+    background-image: url('/assets/landingimages/Group\ 249.png');
+    bottom: 270px; /* Adjust as needed */
+    left: 780px; /* Adjust as needed */
+}
+ 
+#fabric:hover {
+    background-image: url('/assets/landingimages/Group\ 250.png');
+}
+ 
+#observability {
+    background-image: url('/assets/landingimages/Group\ 251.png');
+    bottom: 85px; /* Adjust as needed */
+    right: 320px; /* Adjust as needed */
+}
+ 
+#observability:hover {
+    background-image: url('/assets/landingimages/Group\ 254.png');
+}
+ 
+::ng-deep .basic-tooltip{
+    --mdc-plain-tooltip-container-color:#ffffff !important;
+    --mdc-plain-tooltip-supporting-text-color:black;
+} 
