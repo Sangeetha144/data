@@ -23,7 +23,7 @@
   }
   
   .partneruser {
-    letter-spacing: 7px;
+  letter-spacing: 7px;
   margin-top: -7px;
   font-size: 22px;
   line-height:30px;
@@ -33,7 +33,7 @@
   #content {
     justify-content: center;
     padding-left: 13.5cm;
-  
+    font-family: "Poppins", sans-serif;
   }
   
   
@@ -53,19 +53,20 @@
   }
   
   .btn-cancel {
-    color:white;
-    background-color:grey ;
+  
     height: 40px;
     width: 220px; /* Adjusted width for buttons */
-    border: none;
-   font-weight: bold;
-    justify-content: center;
+  
+
     position: relative;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px;
-    border-radius: 5px;
+ 
     left:-5mm;
    top:-3mm;
   }
+  .mat-mdc-raised-button ,.mat-danger{
+    --mdc-protected-button-container-color:grey !important;
+    --mdc-protected-button-label-text-color:white !important;
+}
   
   .icn {
     color: linear-gradient(to top right, #0a4a7a 45%, #f49f15 90%);

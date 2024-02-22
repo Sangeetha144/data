@@ -7,11 +7,14 @@ import { Observable } from 'rxjs';
 })
 export class SidenavService {
 
-  private baseUrl = 'http://localhost:3000/alternateDataPartners';
+  
  
   constructor(private http: HttpClient) { }
  
-  getDropdownData(): Observable<any[]> {
-    return this.http.get<any[]>(this.baseUrl);
+  getDataShareProjects(): Observable<any[]> {
+    return this.http.get<any[]>('http://localhost:3000/dataShare');
+  }
+  getDbName(){
+    return this.http.get<any[]>('http://localhost:3000/Demand Insights')
   }
 }

@@ -4,7 +4,7 @@
     background: linear-gradient(to top left, #ff9700 0%, #35afd7 57%);
     color: white;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     height: 584px;
 }
  
@@ -57,7 +57,7 @@ img {
 #analytics {
     background-image: url('/assets/landingimages/Group\ 245.png');
     top: 143px; /* Adjust as needed */
-    right: 890px; /* Adjust as needed */
+    right: 850px; /* Adjust as needed */
 }
  
 #analytics:hover {
@@ -87,4 +87,7 @@ img {
 ::ng-deep .basic-tooltip{
     --mdc-plain-tooltip-container-color:#ffffff !important;
     --mdc-plain-tooltip-supporting-text-color:black;
+    
 } 
+
+

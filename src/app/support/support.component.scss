@@ -1,0 +1,51 @@
+.icon-container {
+  position: relative;
+}
+
+.icon-list {
+    margin-top: 15px;
+  position: absolute;
+  top: calc(-100% - 10px); /* Initially off-screen */
+  left: 50%; /* Position in the center */
+  transform: translateX(-50%);
+  background-color: #fff;
+ gap:20px;
+  padding: 15px;
+  transition: top 0.3s ease-in-out; /* Smooth transition for sliding effect */
+  border-radius: 30px; /* Add border radius */
+  display: flex;
+  flex-direction: column; /* Display icons vertically */
+  align-items: flex-start; /* Align icons to the top */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow connecting to the clear icon */
+}
+.ic{
+    margin-top: 5px;
+}
+.icon-container.show-icons .icon-list {
+  top: 30px; /* Move the icon list into view */
+}
+
+.message-icon,
+.clear-icon {
+  background-color: transparent;
+
+  position: absolute;
+ 
+}
+
+.message-icon {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  
+}
+
+.clear-icon {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border:1px solid black;
+  position: relative;
+  top:15px;
+}

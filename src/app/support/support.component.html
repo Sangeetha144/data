@@ -1,0 +1,16 @@
+<div class="icon-container" [class.show-icons]="showIcons">
+    <button mat-icon-button class="message-icon" (click)="toggleIcons()">
+      <mat-icon *ngIf="!showIcons">message</mat-icon>
+    </button>
+    <div class="icon-list" *ngIf="showIcons">
+      <mat-icon class="ic">alarm</mat-icon>
+      <mat-icon class="ic">alarm</mat-icon>
+      <mat-icon class="ic">alarm</mat-icon>
+      <mat-icon class="ic">alarm</mat-icon>
+      <!-- Add more icons as needed -->
+    </div>
+    <button mat-icon-button class="clear-icon" *ngIf="showIcons" (click)="toggleIcons()">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </div>
+  

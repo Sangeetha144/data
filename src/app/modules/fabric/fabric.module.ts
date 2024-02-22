@@ -7,7 +7,7 @@ import { MaterialModule } from 'src/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { CreatedbComponent } from './components/createdb/createdb.component';
-import { BackComponent } from './components/back/back.component';
+
 
 const routes: Routes = [
   {
@@ -36,7 +36,7 @@ const routes: Routes = [
     FabricComponent,
     SidenavComponent,
     CreatedbComponent,
-    BackComponent
+  
   
   ],
   imports: [

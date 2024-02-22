@@ -7,49 +7,46 @@ import { SidenavService } from '../../services/sidenav.service';
   styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent {
+
+  dataShareDropdownOpen = false;
+  dataShareProjects: any[] = [];
+  dbname: any[] = [];
+  showAlternateData = false;
  
-  dropdownOpen: boolean = false;
-  tableDropdownOpen: boolean = false;
-  viewDropdownOpen: boolean = false;
-  loadingTables: boolean = false;
-  loadingViews: boolean = false;
-  dropdownData: any[] = [];
-  loading: boolean = false;
-  tableLoading: boolean = false;
-  tableItems: string[] = [];
+  constructor(private service: SidenavService) {}
  
-  constructor(private service: SidenavService) { }
+  ngOnInit() {
+    this.fetchDataShareProjects();
+  }
  
-  toggleDropdown() {
-    this.dropdownOpen = !this.dropdownOpen;
-    if (this.dropdownOpen) {
-      this.loadingTables = true;
-      this.loadingViews = true;
-      this.tableLoading = true;
+  toggleDataShareDropdown() {
+    this.dataShareDropdownOpen = !this.dataShareDropdownOpen;
+  }
  
-     
-      setTimeout(() => {
-        this.service.getDropdownData().subscribe(data => {
-          this.dropdownData = data;
-          this.loadingTables = false;
-          this.loadingViews = false;
-          this.tableLoading = false;
-        });
-      }, 2000);
+  toggleAlternateData() {
+    this.showAlternateData = !this.showAlternateData;
+    if (this.showAlternateData) {
+      this.fetchDbName();
     }
   }
  
-  toggleTableDropdown() {
-    this.tableDropdownOpen = !this.tableDropdownOpen;
  
-   
-    // if (this.tableDropdownOpen) {
-    //   this.loadTableItems();
-    // }
+  fetchDbName() {
+    this.service.getDbName().subscribe((data) => {
+      this.dbname = data;
+      this.showAlternateData = true;
+    });
   }
  
-  toggleViewDropdown() {
-    this.viewDropdownOpen = !this.viewDropdownOpen;
+  fetchDataShareProjects() {
+    this.service.getDataShareProjects().subscribe(
+      (data) => {
+        this.dataShareProjects = data;
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
+      }
+    );
   }
-  }
+}
    

@@ -18,6 +18,7 @@ export class LandingComponent {
       this.username = params['username'];
     });
   }
+  
 }
 
 

@@ -164,39 +164,24 @@
       "account": "Account 2"
     }
   ],
-  "alternateDataPartners": [
+  
+  "dataShare": [
     {
-      "name": "Tables",
-      "items": [
-        "One",
-        "Two",
-        "Three",
-        "Four"
+      "name":[
+        "Demand Insights",
+        "vendormate"
       ]
-    },
-    {
-      "name": "Views",
-      "items": [
-        "Five",
-        "Six",
-        "Seven",
-        "Eight"
-      ]
+     
     }
   ],
-  "project":[
+  "Demand Insights":[
     {
-      "p1":"Vendormate",
-      
-        "p2":"Corex"
-      
+      "dbname":"Alternate Data Partner"
     }
-      
   ],
-  "Vendormate":[
+  "vendormate":[
     {
-      "d1":"Alternate Data Partners",
-      "d2":"database1"
+      "dbname":"Alternate Data Partners"
     }
   ]
 }

@@ -1,5 +1,4 @@
-
-<div style="width:300px;padding:20px;height:475px">
+<div style="width:300px;padding:20px;height:475px;" class="con">
     <mat-icon style="margin-left: 270px;margin-top: 2px; cursor: pointer;" (click)="closePopup()">highlight_off</mat-icon>
     <div id="con">
     <h1 mat-dialog-title class="title"><mat-icon>server</mat-icon>Create Database</h1>
@@ -18,8 +17,18 @@
                 <p><mat-checkbox formControlName="security">Security Administrator</mat-checkbox></p>
                 <p><mat-checkbox formControlName="super">Super Administrator</mat-checkbox></p>
                 
-                <p id="customrole"> <mat-icon style="color:green">add</mat-icon>Create custom Role</p>
-              </section>
+                <div *ngIf="creatingCustomRole; else customRoleButton">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Custom Role</mat-label>
+                        <input matInput formControlName="customRole" placeholder="Enter custom role">
+                    </mat-form-field>
+                </div>
+                <ng-template #customRoleButton>
+                    <p id="customrole" (click)="toggleCustomRoleInput()">
+                        <mat-icon style="color:green" id="customadd">add</mat-icon>Create custom Role
+                    </p>
+                </ng-template>
+            </section>
     </div>
     </div>
     <div mat-dialog-actions>
@@ -33,4 +42,3 @@
         </div>
     </div>
 </div>
- 

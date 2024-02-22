@@ -21,6 +21,7 @@ import { HeaderComponent } from './header/header.component';
 import { TileComponent } from './tile/tile.component';
 import { UserActivityComponent } from './user-activity/user-activity.component';
 import { BackComponent } from './back/back.component';
+import { SupportComponent } from './support/support.component';
 
  
 @NgModule({
@@ -39,6 +40,7 @@ import { BackComponent } from './back/back.component';
     TileComponent,
     UserActivityComponent,
     BackComponent,
+    SupportComponent,
     
 
   ],

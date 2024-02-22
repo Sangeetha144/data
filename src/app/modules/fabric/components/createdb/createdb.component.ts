@@ -9,7 +9,7 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./createdb.component.scss']
 })
 export class CreatedbComponent {
-
+  creatingCustomRole: boolean = false;
   
     constructor(private ref:MatDialogRef<CreatedbComponent>,private _formBuilder: FormBuilder){}
     closePopup(){
@@ -23,7 +23,12 @@ export class CreatedbComponent {
       system: false,
       public: false,
       super: false,
+      customRole: ''
     });
+    
+  toggleCustomRoleInput() {
+    this.creatingCustomRole = !this.creatingCustomRole;
+  }
    
   }
    

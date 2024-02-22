@@ -4,9 +4,11 @@ h3{
     color: black;
 position: relative;
 top:-6px;
-bottom:2px;
-}
 
+}
+.con{
+  font-family: "Poppins", sans-serif;
+}
  
 h1{
  margin: 0px;
@@ -42,8 +44,10 @@ mat-form-field{
 }
 p{
     margin: 0px;
-position: relative;
-top:-3px;
+
+font-family: "Poppins", sans-serif;
+font-size: 13px;
+
 }
  .example-section{
     position: relative;
@@ -84,10 +88,20 @@ top:-3px;
 .button-group button {
     display: inline-flex;
     align-items: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
 }
 #customrole{
     position: relative;
-    top:-25px;
-    left:6px;
+    top:-30px;
+    left:18px;
     
 }
+#customadd{
+  position: relative;
+  right:10px;
+  top:5px;
+}
+// .mat-mdc-checkbox{
+//   font-family: "Poppins", sans-serif;
+// }

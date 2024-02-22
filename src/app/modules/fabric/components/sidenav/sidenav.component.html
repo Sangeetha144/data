@@ -1,72 +1,31 @@
+
 <mat-sidenav-container class="custom-sidenav-container">
   <mat-sidenav #sidenav [opened]="true" mode="side" class="custom-sidenav">
- 
-   
+  
     <mat-nav-list class="custom-nav-list">
-      <a mat-list-item routerLink="/landing" class="custom-nav-item">
+      <a mat-list-item routerLink="/home" class="custom-nav-item">
         <mat-icon class="custom-icon">home</mat-icon>
         <span mat-line class="custom-span custom-span-bold">Home</span>
       </a>
-      <div class="insight">
-        <a mat-list-item mat-expansion-panel class="custom-nav-item custom-span-bold" routerLink="/fabric/db">
+      <div class="data-share">
+        <a mat-list-item class="custom-nav-item" (click)="toggleDataShareDropdown()">
           <mat-icon class="custom-icon">keyboard_arrow_down</mat-icon>
-          <span mat-line class="custom-span custom-span-bold">Demand Insights</span>
+          <span mat-line class="custom-span custom-span-bold">Data Share</span>
         </a>
-      </div>
-      <div class="tone">
-        <a mat-list-item class="custom-nav-item" (click)="toggleDropdown()" routerLink="/fabric/share">
-          <mat-icon class="custom-icon">keyboard_arrow_down</mat-icon>
-          <span mat-line class="custom-span custom-span-bold">Alternate Data Partners</span>
-        </a>
-      </div><br>
- 
-      <div *ngIf="dropdownOpen" class="custom-dropdown">
-        <div class="spinner-container" *ngIf="loadingTables || loadingViews">
-          <mat-spinner [diameter]="50"></mat-spinner>
-        </div>
- 
-        <div *ngIf="!loadingTables && !loadingViews">
-          <!-- Tables Dropdown -->
-          <div *ngFor="let partner of dropdownData">
-            <div *ngIf="partner.name === 'Tables'">
-              <a mat-list-item (click)="toggleTableDropdown()" class="custom-sub-nav-item custom-span-bold">
-                <mat-icon class="custom-sub-icon">arrow_forward_ios</mat-icon>
-                <span mat-line class="custom-sub-span custom-span-bold">{{ partner.name }}</span>
-              </a>
-              <!-- Inside the "Tables" section -->
-<div class="spinner-container" *ngIf="tableLoading">
-  <mat-spinner [diameter]="50"></mat-spinner>
-</div>
- 
-              <div class="custom-sub-dropdown" *ngIf="tableDropdownOpen">
-                <a mat-list-item *ngFor="let item of partner.items" routerLink="/tables/{{ item.toLowerCase() }}" class="custom-sub-sub-nav-item">
-                 
-                  <span mat-line class="custom-sub-sub-span link">{{ item }}</span>
-                </a>
-              </div>
-            </div>
-          </div>
-         
-          <!-- Views Dropdown -->
-          <div *ngFor="let partner of dropdownData">
-            <div *ngIf="partner.name === 'Views'">
-              <a mat-list-item (click)="toggleViewDropdown()" class="custom-sub-nav-item custom-span-bold">
-                <mat-icon class="custom-sub-icon">arrow_forward_ios</mat-icon>
-                <span mat-line class="custom-sub-span custom-span-bold">{{ partner.name }}</span>
-              </a>
- 
-              <div class="custom-sub-dropdown" *ngIf="viewDropdownOpen">
-                <a mat-list-item *ngFor="let item of partner.items" routerLink="/views/{{ item.toLowerCase() }}" class="custom-sub-sub-nav-item">
-                 
-                  <span mat-line class="custom-sub-sub-span link">{{ item }}</span>
-                </a>
-              </div>
-            </div>
-          </div>
+        <div *ngIf="dataShareDropdownOpen" class="custom-dropdown">
+          <a mat-list-item *ngFor="let projectName of dataShareProjects[0].name" class="custom-nav-item" (click)="toggleAlternateData()" routerLink="/fabric/share">
+            <mat-icon class="custom-icon">keyboard_arrow_down</mat-icon>
+            <span mat-line class="custom-span custom-span-bold">{{ projectName }}</span>
+          </a>
         </div>
       </div>
     </mat-nav-list>
+    <div *ngIf="showAlternateData" class="custom-dropdown">
+      <div class="mydb">
+        <ul>
+          <li *ngFor="let db of dbname">{{ db.dbname }}</li>
+        </ul>
+      </div>
+    </div>
   </mat-sidenav>
-  <mat-sidenav-content class="custom-sidenav-content">
-  </mat-sidenav-content>
 </mat-sidenav-container>
