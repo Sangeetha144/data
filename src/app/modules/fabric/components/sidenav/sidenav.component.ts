@@ -51,20 +51,29 @@
 // }
    
 
+
 import { Component } from '@angular/core';
  
 @Component({
   selector: 'app-sidenav',
-    templateUrl: './sidenav.component.html',
-    styleUrls: ['./sidenav.component.scss']
+  templateUrl: './sidenav.component.html',
+  styleUrls: ['./sidenav.component.scss']
 })
 export class SidenavComponent {
   dataShareMenuOpen: boolean = false;
   partnerDropdownOpen: string | null = null;
   tablesAndViewsDropdownOpen: string | null = null;
+  isLoading: boolean = false;
  
   toggleDataShareMenu() {
     this.dataShareMenuOpen = !this.dataShareMenuOpen;
+    if (this.dataShareMenuOpen) {
+      this.isLoading = true; // Show loading spinner
+      // Simulate loading for 1.5 seconds
+      setTimeout(() => {
+        this.isLoading = false; // Hide loading spinner
+      }, 1500);
+    }
   }
  
   togglePartnerDropdown(partner: string) {
@@ -75,3 +84,4 @@ export class SidenavComponent {
     this.tablesAndViewsDropdownOpen = this.tablesAndViewsDropdownOpen === partner ? null : partner;
   }
 }
+ 

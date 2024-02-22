@@ -7,13 +7,18 @@ import { MaterialModule } from 'src/material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { CreatedbComponent } from './components/createdb/createdb.component';
-
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 const routes: Routes = [
   {
     path : '',
     component :FabricComponent,
     children:[
+      {
+        path:'',
+        component:DashboardComponent
+      },
       {
         path:'share',
         component:ShareComponent
@@ -36,6 +41,7 @@ const routes: Routes = [
     FabricComponent,
     SidenavComponent,
     CreatedbComponent,
+    DashboardComponent,
   
   
   ],
@@ -43,7 +49,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgApexchartsModule
   ]
 })
 export class FabricModule { }

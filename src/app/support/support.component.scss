@@ -1,51 +1,69 @@
 .icon-container {
-  position: relative;
-}
-
-.icon-list {
-    margin-top: 15px;
-  position: absolute;
-  top: calc(-100% - 10px); /* Initially off-screen */
-  left: 50%; /* Position in the center */
-  transform: translateX(-50%);
-  background-color: #fff;
- gap:20px;
-  padding: 15px;
-  transition: top 0.3s ease-in-out; /* Smooth transition for sliding effect */
-  border-radius: 30px; /* Add border radius */
-  display: flex;
-  flex-direction: column; /* Display icons vertically */
-  align-items: flex-start; /* Align icons to the top */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow connecting to the clear icon */
-}
-.ic{
-    margin-top: 5px;
-}
-.icon-container.show-icons .icon-list {
-  top: 30px; /* Move the icon list into view */
-}
-
-.message-icon,
-.clear-icon {
-  background-color: transparent;
-
-  position: absolute;
- 
-}
-
-.message-icon {
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
+    position: relative;
+    top: 100px;
+  }
   
-}
+  .icon-list {
+    background-color: rgba($color: #ffffff, $alpha: 0.5);
+    opacity: 0.5;
+    position: absolute;
+    top: calc(-100% - 20px); /* Adjust position above the message icon */
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 20px;
+    padding: 13px;
+    transition: top 0.3s ease-in-out;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1; /* Ensure icons are displayed above other elements */
+  }
+  
+  .clear-icon {
+    position: absolute;
+    top: calc(100% + 10px); /* Position below the message icon button */
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    color: white;
+    top:15px;
+    background-color: rgb(46, 160, 202);
+    z-index: 2; /* Ensure clear icon is displayed above the icon list */
+  }
+  
+  
+  
+  .ic {
+    margin-top: 5px;
+  }
+  
+  .icon-container.show-icons .icon-list {
+    top: 50px; /* Move the icon list into view */
+  }
+  
+  .message-icon,
+  .clear-icon {
+    position: absolute;
+  }
+  
+  .message-icon {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-color: rgb(46, 160, 202);
+  }
 
-.clear-icon {
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border:1px solid black;
-  position: relative;
-  top:15px;
-}
+
+
+  /* Define the CSS class for the blue background */
+.message-icon-bgg {
+    background-color: rgb(46, 160, 202); 
+  }
+
+
+  .icon-container.show-icons .icon-list {
+    opacity: 1;
+  }
+  

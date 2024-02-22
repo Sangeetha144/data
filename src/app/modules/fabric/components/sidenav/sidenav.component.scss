@@ -118,14 +118,14 @@
   }
  
   /* Target the entire mat-sidenav-container */
-  .mat-sidenav-container {
-    position: fixed;
-    top: 0;
+.mat-sidenav-container {
+    width: 250px !important;
+    position: absolute !important;
+    top: 70px;
     left: 0;
     right: 0;
     bottom: 0;
-  }
- 
+}
   /* Target the mat-sidenav element */
   .mat-sidenav {
     width: 250px;
@@ -264,14 +264,23 @@
     margin-left: auto;
     background: linear-gradient(to top right, #0a4a7a 45%, #f49f15 90%); /* Moves the container to the right */
   }
+  mat-icon{
+    	position: relative;
+    	top:2px;
+      right:1px;
+      }
+ 
+      .loading-spinner{
+        margin-left: 100px;
+      
+      }
  
  
  
  
- 
- 
- 
- 
+      .custom-sidenav-container{
+        height:800px;
+      }
  
  
  
