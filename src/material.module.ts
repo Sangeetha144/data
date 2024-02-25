@@ -12,7 +12,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatSelectModule} from '@angular/material/select';
 import { MatNativeDateModule } from '@angular/material/core';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatBadgeModule} from "@angular/material/badge"
 import {MatSliderModule} from "@angular/material/slider"
 import {MatTableModule} from "@angular/material/table"
@@ -51,7 +51,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
         MatFormFieldModule,
         MatProgressSpinnerModule,
         MatExpansionModule,
-        MatTooltipModule
+        MatTooltipModule,
+        MatSnackBarModule
     ],
  
   })

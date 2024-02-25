@@ -6,6 +6,7 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { MatTableDataSource } from '@angular/material/table';
 import { CreatedbComponent } from '../createdb/createdb.component';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
 selector: 'app-share',
 templateUrl: './share.component.html',
@@ -28,7 +29,7 @@ accounts: string[] = [
   'Account 2',
   'Account 3'
 ];
-constructor(private _fb:FormBuilder, private service:FabricService,private dialog:MatDialog){
+constructor(private _fb:FormBuilder, private service:FabricService,private dialog:MatDialog,private snackbar:MatSnackBar){
   this.dataForm = this._fb.group({
 
     dataShare:  ['', Validators.required],
@@ -41,7 +42,11 @@ onFormSubmit(){
 if(this.dataForm.valid){
   this.service.postData(this.dataForm.value).subscribe({
     next:(value:any)=>{
-      alert('successfully added')
+      this.snackbar.open('Successfully added', 'Close', {
+        duration: 2000, // Duration in milliseconds
+        horizontalPosition: 'right',
+        verticalPosition: 'top'
+      });
       this.displayData();
    
     },

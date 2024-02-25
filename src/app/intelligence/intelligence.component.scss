@@ -25,7 +25,7 @@ button{
     }
 .iconn{
         font-size: 20px;
-        margin-top: 8px;
+        margin-top: 2px;
     }
     .date{
         display: flex;
@@ -33,6 +33,10 @@ button{
         
       }
       
-      
+      .mat-mdc-raised-button.mat-warn{
+        --mdc-protected-button-container-color:grey !important;
+        --mdc-protected-button-label-text-color:white !important;
+        width:85px;
+      }    
       
       

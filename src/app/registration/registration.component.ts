@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
-
+import {MatSnackBar, MatSnackBarRef} from '@angular/material/snack-bar';
 import { Router } from '@angular/router'
 @Component({
   selector: 'app-registration',
@@ -11,7 +11,7 @@ export class RegistrationComponent {
   registrationForm!: FormGroup;
   result:any
  
-  constructor(private fb: FormBuilder, private router:Router) {}
+  constructor(private fb: FormBuilder, private router:Router, private snackbar:MatSnackBar) {}
  
   ngOnInit() {
     this.registrationForm = this.fb.group({
@@ -39,12 +39,21 @@ export class RegistrationComponent {
     onSubmit(){
       if(this.registrationForm.valid)
       {
-        alert("User Registered Successfully");
-      
+       
+       
+          this.snackbar.open('User Registered Successfully', '', {
+            duration: 2000, // Duration in milliseconds
+            horizontalPosition: 'right',
+            verticalPosition: 'top',
+            panelClass:['snackbar']
+          });
+          this.router.navigate(['/login'])
+
       }
+     
     }
- 
-    
+
+      
   onCancel(): void {
     this.registrationForm.reset(); // Reset the form
     Object.keys(this.registrationForm.controls).forEach(key => { 
@@ -65,4 +74,8 @@ toggleConfirmPasswordVisibility(): void {
 }
 
 
+
+function openSnackbar(message: any) {
+  throw new Error('Function not implemented.');
+}
 

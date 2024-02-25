@@ -10,12 +10,14 @@ export class LandingComponent {
  
 
   username!: string;
+  name!:string|null;
  
   constructor(private route: ActivatedRoute) {}
  
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
       this.username = params['username'];
+     
     });
   }
   

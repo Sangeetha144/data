@@ -5,7 +5,7 @@
       <form class="example-form">
         <mat-form-field class="example-full-width" style="width: 200px">
           <mat-label>Selected Product</mat-label>
-          <input matInput value="Vendormate" />
+          <input matInput [value]="selectedslicename" />
         </mat-form-field>
       </form>
     </div>
@@ -14,7 +14,7 @@
       <form class="example-form">
         <mat-form-field class="example-full-width" style="width: 200px">
           <mat-label>Select Type</mat-label>
-          <input matInput [matAutocomplete]="auto" [formControl]="formcontrol" [value]="selectedOption" [(ngModel)]="selectedOption" />
+          <input matInput [matAutocomplete]="auto" [formControl]="formcontrol"  [(ngModel)]="selectedOption" />
           <mat-icon class="icon" *ngIf="!selectedOption">keyboard_arrow_down</mat-icon >
           <mat-autocomplete autoActiveFirstOption #auto (optionSelected)="optionSelected($event.option.value)">
             <mat-option *ngFor="let item of filteroptions | async" [value]="item">
@@ -72,11 +72,11 @@
       Submit
     </button>
 
-    <button mat-raised-button (click)="clearAll()" >Clear</button>
+    <button mat-raised-button  color="warn" (click)="clearAll()" >Clear </button>
   </div>
 
   <div *ngIf="!submitted">
-    <app-line-chart [options]="selectedOption" ></app-line-chart>
+    <app-line-chart [options]="submitOption" ></app-line-chart>
     <app-table></app-table>
   </div>
   <div *ngIf="showSpinner" class="spin">

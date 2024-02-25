@@ -1,7 +1,8 @@
 import { Component, ViewChild,OnInit, ElementRef } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { map, Observable, startWith } from 'rxjs';
-import {MatDatepickerInputEvent} from '@angular/material/datepicker';
+import {MatDatepicker, MatDatepickerInput, MatDatepickerInputEvent} from '@angular/material/datepicker';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-intelligence',
@@ -9,11 +10,14 @@ import {MatDatepickerInputEvent} from '@angular/material/datepicker';
   styleUrls: ['./intelligence.component.scss']
 })
 export class IntelligenceComponent implements OnInit{
-  @ViewChild('fromDatePicker') fromDatePicker!: ElementRef<HTMLInputElement>;
+  // @ViewChild('fromDatePicker') fromDatePicker!: MatDatepicker<any>
+  @ViewChild('fromDatePicker', { read: MatDatepickerInput }) fromDatePickerInput!: MatDatepickerInput<any>;
+  fromDatePicker: any;
+  constructor(private route:ActivatedRoute ){}
  
   showSpinner: boolean = false;
   submitted:boolean=false;
-
+  selectedslicename!:string
  
   onSubmit() {
     this.submitted = true; // Set submitted to true
@@ -22,6 +26,7 @@ export class IntelligenceComponent implements OnInit{
     setTimeout(() => {
       this.hideSpinner(); // Hide spinner after 5 seconds
     }, 2000);
+    this.submitOption = this.selectedOption
   }
  
   hideSpinner() {
@@ -32,12 +37,12 @@ export class IntelligenceComponent implements OnInit{
 typearray = ['No of Logins', 'No of successful payment', 'No of failure payment'];
 filteroptions: Observable<string[]> = new Observable<string[]>();
 formcontrol = new FormControl('');
-selectedOption: string | null = null;
-opt:string ="No of Logins";
+selectedOption: string | null = "No of Logins";
+submitOption:string|null= "No of Logins";
 
 public clearFilter(): void {
   this.formcontrol.setValue(''); // Clear the selected option
-  this.selectedOption = null; // Reset selectedOption
+  this.selectedOption = ''; // Reset selectedOption
   
 }
 
@@ -49,6 +54,10 @@ ngOnInit(): void {
   );
   this.futureDateDisable();
 this.setDates();
+this.route.queryParams.subscribe(params => {
+  this.selectedslicename = params['slicename'];
+
+})
 }
 
 optionSelected(option: string): void {
@@ -141,12 +150,18 @@ this.maxDate = year +'-'+ this.month + '-'+ this.todayDate
 
 clearAll() {
   // Reset other form controls and variables
-  this.formcontrol.setValue('');
-  this.selectedOption = null;
+  this.formcontrol.setValue('No of Logins');
+this.submitOption= 'No of Logins'
   this.date = new FormControl(new Date());
-
-
-
-
+ 
+  // Set the "From" datepicker value to yesterday's date in the format m/d/yyyy
+  const yesterday = this.yesterdayDate;
+  const formattedDate = (yesterday.getMonth() + 1) + '/' + yesterday.getDate() + '/' + yesterday.getFullYear();
+  const fromDatePickerInput = document.getElementsByName('fromDate')[0] as HTMLInputElement;
+  if (fromDatePickerInput) {
+    fromDatePickerInput.value = formattedDate;
+  }
 }
+ 
+
 }

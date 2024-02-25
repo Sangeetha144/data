@@ -72,7 +72,7 @@ export class SidenavComponent {
       // Simulate loading for 1.5 seconds
       setTimeout(() => {
         this.isLoading = false; // Hide loading spinner
-      }, 1500);
+      }, 1000);
     }
   }
  

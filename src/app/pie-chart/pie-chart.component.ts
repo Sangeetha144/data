@@ -1,3 +1,8 @@
+
+
+
+
+
 import { Component, OnInit, ElementRef, ViewChild, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import {
@@ -20,9 +25,10 @@ interface CustomApexChart extends ApexChart {
 })
 export class PieChartComponent implements OnInit {
   @Output() sliceClicked = new EventEmitter<string>();
-
+  constructor(private router: Router) { }
   onSliceClick(sliceName: string) {
     this.sliceClicked.emit(sliceName);
+    this.router.navigate(['/intelligence'],{ queryParams: { slicename: sliceName } });
   }
   public colors: string[] = ['#008FFB', '#00E396', '#FEB019', '#FF4560', '#20B2AA','#CD853F','#D8BFD8','#FFE4B5','#F08080'];
 
@@ -33,6 +39,14 @@ export class PieChartComponent implements OnInit {
     toolbar: {
       show: false
     },
+    events: {
+      dataPointSelection: (event: any, chartContext: any, config: any) => {
+        const selectedSliceIndex = config.dataPointIndex;
+        const selectedSliceName = this.labels[selectedSliceIndex];
+        console.log("Clicked slice:", selectedSliceName); // Log the label of the clicked slice
+        this.onSliceClick(selectedSliceName);
+      }
+    }
   } as CustomApexChart;
   totalPercentageElement: ElementRef | undefined;
 
@@ -43,41 +57,10 @@ export class PieChartComponent implements OnInit {
   };
   chartAnnotations: ApexAnnotations = {}; // Initialize chartAnnotations with an empty object
 
-  constructor(private router: Router) { }
+
 
   ngOnInit(): void {
-    
-    this.addTotalAnnotation();
+   
   }
 
-  handleSliceClick(event: any): void {
-    // const sliceName = event.target.getLabel(); 
-    // this.sliceClicked.emit(sliceName);
-    
-    
-    this.router.navigate(['/intelligence']);
-  }
-
-
-  
-  private addTotalAnnotation(): void {
-    const total = this.series.reduce((acc, val) => acc + val, 0); // Calculate total
-    const annotation: ApexAnnotations = {
-      points: [{
-        x: 50,
-        y: 50,
-        marker: {
-          size: 50
-        },
-        label: {
-          text: total.toString(), // Convert to string to display
-          style: {
-            fontSize: '2.5rem',
-       color: 'black'
-          }
-        }
-      }]
-    };
-    this.chartAnnotations = annotation; // Assign the annotation to chartAnnotations
-  }
 }

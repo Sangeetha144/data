@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'frontend';
   isLoggedIn(){
-    return localStorage.getItem('loggedIn')==='true';
+    return sessionStorage.getItem('loggedIn')==='true';
   }
 }

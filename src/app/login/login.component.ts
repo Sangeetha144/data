@@ -30,7 +30,7 @@ link:boolean= false;
 
   onSubmit() {
     if (this.loginForm.valid) {
-      localStorage.setItem('loggedIn','true')
+    sessionStorage.setItem('loggedIn','true')
             // Retrieve the entered username
             const username = this.loginForm.get('username')?.value;
  

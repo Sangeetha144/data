@@ -152,36 +152,31 @@
   ],
   "share": [
     {
-      "id": "57b2",
-      "dataShare": "Data Share Name 2",
-      "objectShare": "Object Share Name 1",
-      "account": "Account 2"
-    },
-    {
-      "id": "f666",
+      "id": "f308",
       "dataShare": "Data Share Name 2",
       "objectShare": "Object Share Name 2",
       "account": "Account 2"
     }
   ],
-  
   "dataShare": [
     {
-      "name":[
+      "name": [
         "Demand Insights",
         "vendormate"
-      ]
-     
+      ],
+      "id": "434e"
     }
   ],
-  "Demand Insights":[
+  "Demand Insights": [
     {
-      "dbname":"Alternate Data Partner"
+      "dbname": "Alternate Data Partner",
+      "id": "4341"
     }
   ],
-  "vendormate":[
+  "vendormate": [
     {
-      "dbname":"Alternate Data Partners"
+      "dbname": "Alternate Data Partners",
+      "id": "69a2"
     }
   ]
 }

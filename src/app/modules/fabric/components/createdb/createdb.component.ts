@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-createdb',
@@ -13,7 +14,7 @@ export class CreatedbComponent {
 
   customRoleControls: { label: string, checked: boolean }[] = [];
 
-  constructor(private ref: MatDialogRef<CreatedbComponent>, private _formBuilder: FormBuilder) {
+  constructor(private ref: MatDialogRef<CreatedbComponent>, private _formBuilder: FormBuilder,private snackbar:MatSnackBar) {
     this.roles = this._formBuilder.group({
       organization: false,
       account: false,
@@ -52,7 +53,12 @@ export class CreatedbComponent {
   createDb()
   
   {
-    alert('Database has been created')
+    this.snackbar.open('Data has been created', 'Close', {
+      duration: 2000, // Duration in milliseconds
+      horizontalPosition: 'right',
+      verticalPosition: 'top'
+    });
+  
     this.ref.close();
   }
 }

@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <apx-chart 
       [series]="series" 
       [chart]="details" 
@@ -6,6 +6,18 @@
       [title]="title" 
       [colors]="colors"
       (click)="handleSliceClick($event)"
+      [annotations]="chartAnnotations"
+    >
+    </apx-chart>
+  </div>
+   -->
+   <div class="container">
+    <apx-chart 
+      [series]="series" 
+      [chart]="details" 
+      [labels]="labels" 
+      [title]="title" 
+      [colors]="colors"
       [annotations]="chartAnnotations"
     >
     </apx-chart>

@@ -40,7 +40,7 @@ export class LineChartComponent implements OnInit {
   
   @ViewChild("chart") chart!: ChartComponent;
   public chartOptions!: ChartOptions;
-@Input() options:string|null = null
+@Input() options:string|null = ""
   constructor(private route: ActivatedRoute, private router: Router) {
 
   }
