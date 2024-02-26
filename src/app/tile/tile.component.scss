@@ -2,6 +2,14 @@
   font-family: "Poppins", sans-serif;
   display: flex;
 }
+.card-container {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px;
+
+}
+.parent{
+  display: flex;
+}
 
     
     .example-card {
@@ -29,3 +37,10 @@
     
     }
 
+     
+    .mat-mdc-raised-button.mat-warn{
+      --mdc-protected-button-container-color:grey !important;
+      --mdc-protected-button-label-text-color:white !important;
+      width:85px;
+    }    
+    

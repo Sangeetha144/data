@@ -38,7 +38,7 @@ export class PieChartComponent  {
         enabled: false
       },
     legend: {
-        position: 'bottom',
+        position: 'right',
         horizontalAlign: 'left',
         offsetY: 10,
         itemMargin: {
