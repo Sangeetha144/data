@@ -11,6 +11,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class IntelligenceComponent implements OnInit{
   // @ViewChild('fromDatePicker') fromDatePicker!: MatDatepicker<any>
+  productOptions: string[] = ['CoreX', 'Vendormate', 'Data connect', 'Supply chain analytics', 'Fusion', 'Nuvia', 'E-pay', 'Curate', 'CCXpert'];
+
   @ViewChild('fromDatePicker', { read: MatDatepickerInput }) fromDatePickerInput!: MatDatepickerInput<any>;
   fromDatePicker: any;
   constructor(private route:ActivatedRoute ){}

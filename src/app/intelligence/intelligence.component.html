@@ -1,12 +1,22 @@
-<app-back></app-back>
+<div class="slicename">
+  <h1>{{selectedslicename}}</h1>
+</div>
 <div class="con">
+
   <div class="parent">
     <div id="select">
       <form class="example-form">
-        <mat-form-field class="example-full-width" style="width: 200px" appearance="outline">
+        <!-- <mat-form-field class="example-full-width" style="width: 200px" appearance="outline">
           <mat-label>Selected Product</mat-label>
           <input matInput [value]="selectedslicename" />
+        </mat-form-field> -->
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Selected Product</mat-label>
+          <mat-select [(value)]="selectedslicename">
+            <mat-option *ngFor="let option of productOptions" [value]="option">{{ option }}</mat-option>
+          </mat-select>
         </mat-form-field>
+        
       </form>
     </div>
 

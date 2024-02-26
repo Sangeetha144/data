@@ -4,11 +4,20 @@
   
   
 }
+.slicename{
+    margin-left: 45px;
+    margin-top: 20px;
+    color:rgb(7, 18, 76);
 
+    text-shadow: 1px 2px 3px rgba(158, 153, 172, 0.8);
+    
+}
 .con{
     position: relative;
     margin:40px;
     font-family: "Poppins", sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 30px;
 }
 button{
     margin-top: 10px;
@@ -19,14 +28,15 @@ button{
 }
 .icon{
     margin-left: -30px;
-    margin-top: -10px;
+   
     }
     mat-form-field{
         height:77px;
     }
 .iconn{
         font-size: 20px;
-        margin-top: 2px;
+        margin-top: -10px;
+        
     }
     .date{
         display: flex;
