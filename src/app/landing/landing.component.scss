@@ -6,7 +6,7 @@
     margin: 0;
     font-family: "Poppins", sans-serif;
     height: 584px;
-    overflow-x: hidden; /* Add this line to hide horizontal scrollbar */
+    overflow: hidden; /* Add this line to hide horizontal scrollbar */
 }
 
 .image {
@@ -14,15 +14,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 70px; /* Adjust as needed */
-    overflow: hidden; /* Add this line to hide overflowing content */
+    margin-top: 60px; /* Adjust as needed */
+   
 }
 
 .support {
     position: absolute; /* Change to absolute positioning */
     bottom: 0; /* Position at the bottom */
     margin-left: 1200px;/* Position in the middle */
-    padding: 20px;
+   
     transform: translateX(-50%); /* Center horizontally */
 }
 
@@ -91,7 +91,7 @@ img {
 #observability {
     background-image: url('/assets/landingimages/Group\ 251.png');
     bottom: 85px; /* Adjust as needed */
-    right: 320px; /* Adjust as needed */
+    right: 300px; /* Adjust as needed */
 }
  
 #observability:hover {
