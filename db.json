@@ -142,12 +142,20 @@
       "id": "4e34"
     },
     {
-      "mostUsedProduct": "Vendormate",
+      "frequentlyUsedProduct": "Vendormate",
       "id": "48e8"
     },
     {
       "activeProduct": "5",
       "id": "7bdd"
+    },
+    {
+      "minimalUsedProduct":"E-pay"
+
+    },
+    {
+      "appLoadingTime":"100 ms"
+
     }
   ],
   "share": [

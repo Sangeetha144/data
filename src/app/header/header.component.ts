@@ -10,6 +10,7 @@ export class HeaderComponent {
 logout(){
  this.router.navigate([''])
 sessionStorage.removeItem('loggedIn');
+sessionStorage.removeItem('username')
 
 }
 

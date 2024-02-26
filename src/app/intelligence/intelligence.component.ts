@@ -18,14 +18,14 @@ export class IntelligenceComponent implements OnInit{
   showSpinner: boolean = false;
   submitted:boolean=false;
   selectedslicename!:string
- 
+  displaytableboolean: boolean = false;
   onSubmit() {
     this.submitted = true; // Set submitted to true
     this.showSpinner = true; // Show spinner
  
     setTimeout(() => {
       this.hideSpinner(); // Hide spinner after 5 seconds
-    }, 2000);
+    }, 1000);
     this.submitOption = this.selectedOption
   }
  
@@ -162,6 +162,20 @@ this.submitOption= 'No of Logins'
     fromDatePickerInput.value = formattedDate;
   }
 }
+
+handleChartEvent(event: boolean) {
+  this.showSpinner = true;
+  this.displaytableboolean = false;
+
+  setTimeout(() => {
+    this.showSpinner = false; // Hide spinner after 20 seconds
+    this.displaytableboolean = true; // Show table after spinner disappears
+  }, 2000);
+ 
+  console.log("Received boolean value from LineChartComponent:", event);
+  // You can perform further actions based on the received boolean value
+}
+
  
 
 }

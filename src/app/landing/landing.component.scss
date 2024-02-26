@@ -55,13 +55,16 @@ img {
     width: 130px;
     height: 180px;
     background-size: cover;
-    transition: background-image 0.8s ease-in-out;
+    transition: background-image 0.8s ease-in-out, transform 0.3s ease-in-out;
+}
+.icon:hover {
+    transform: scale(1.1); /* Adjust the scale factor as needed */
 }
  
 #intelligence {
     background-image: url('/assets/landingimages/Group\ 247.png');
-    top: -3px; /* Adjust as needed */
-    left: 360px; /* Adjust as needed */
+    top: -6px; /* Adjust as needed */
+    left: 340px; /* Adjust as needed */
 }
  
 #intelligence:hover {
@@ -70,8 +73,8 @@ img {
  
 #analytics {
     background-image: url('/assets/landingimages/Group\ 245.png');
-    top: 143px; /* Adjust as needed */
-    right: 850px; /* Adjust as needed */
+    top: 153px; /* Adjust as needed */
+    right: 860px; /* Adjust as needed */
 }
  
 #analytics:hover {
@@ -101,5 +104,6 @@ img {
 ::ng-deep .basic-tooltip{
     --mdc-plain-tooltip-container-color:#ffffff !important;
     --mdc-plain-tooltip-supporting-text-color:black;
-    
+    --mdc-plain-tooltip-supporting-text-font:"Poppins", sans-serif;
+    --mdc-plain-tooltip-supporting-text-size:10px;
 } 

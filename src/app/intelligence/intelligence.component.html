@@ -3,7 +3,7 @@
   <div class="parent">
     <div id="select">
       <form class="example-form">
-        <mat-form-field class="example-full-width" style="width: 200px">
+        <mat-form-field class="example-full-width" style="width: 200px" appearance="outline">
           <mat-label>Selected Product</mat-label>
           <input matInput [value]="selectedslicename" />
         </mat-form-field>
@@ -12,7 +12,7 @@
 
     <div class="autocomplete">
       <form class="example-form">
-        <mat-form-field class="example-full-width" style="width: 200px">
+        <mat-form-field class="example-full-width" style="width: 200px"  appearance="outline">
           <mat-label>Select Type</mat-label>
           <input matInput [matAutocomplete]="auto" [formControl]="formcontrol"  [(ngModel)]="selectedOption" />
           <mat-icon class="icon" *ngIf="!selectedOption">keyboard_arrow_down</mat-icon >
@@ -29,7 +29,7 @@
     </div>
 
     <div class="date">
-      <mat-form-field class="example-form-field" style="width: 200px">
+      <mat-form-field class="example-form-field" style="width: 200px" appearance="outline">
         <mat-label>From</mat-label>
         <input
           matInput
@@ -48,7 +48,7 @@
         <mat-datepicker #fromDatePicker></mat-datepicker>
       </mat-form-field>
 
-      <mat-form-field class="example-form-field" style="width: 200px">
+      <mat-form-field class="example-form-field" style="width: 200px" appearance="outline">
         <mat-label>To</mat-label>
         <input
           matInput
@@ -76,10 +76,10 @@
   </div>
 
   <div *ngIf="!submitted">
-    <app-line-chart [options]="submitOption" ></app-line-chart>
-    <app-table></app-table>
+    <app-line-chart [options]="submitOption" (chartEvent)="handleChartEvent($event)" ></app-line-chart>
+    <app-table *ngIf="displaytableboolean"></app-table>
   </div>
   <div *ngIf="showSpinner" class="spin">
-    <mat-spinner></mat-spinner>
+    <mat-spinner diameter="80"></mat-spinner>
   </div>
 </div>

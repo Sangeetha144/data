@@ -1,21 +1,24 @@
 
-<div class="full" >
-<div *ngFor="let item of cardData" class="card-container">
-  <mat-card class="example-card">
-    <mat-card-header>
-      <mat-card-title>
-        <h1>{{ item.activeUser ? 'Active User' : (item.mostUsedProduct ? 'Most Used Product' : 'Active Product') }}</h1>
-      </mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p class="con">{{ item.activeUser || item.mostUsedProduct || item.activeProduct }}</p>
-    </mat-card-content>
-  </mat-card>
 
-</div>
-<div class="pie">
-    <app-pie-chart></app-pie-chart>
+  <div class="full">
+    <div *ngFor="let item of cardData" class="card-container">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>
+            <h1>{{ getTitle(item) }}</h1>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p class="con">{{ getValue(item) }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="pie">
+      <app-pie-chart></app-pie-chart>
+    </div>
   </div>
-</div>
+  
+
+
 
 

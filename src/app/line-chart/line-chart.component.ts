@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild,Input,OnChanges, SimpleChanges } from "@angular/core";
+import { Component, OnInit, ViewChild,Input,OnChanges, SimpleChanges, EventEmitter, Output } from "@angular/core";
 import { ChartComponent } from "ng-apexcharts";
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router'; // Import NavigationEnd
 import {
@@ -40,7 +40,8 @@ export class LineChartComponent implements OnInit {
   
   @ViewChild("chart") chart!: ChartComponent;
   public chartOptions!: ChartOptions;
-@Input() options:string|null = ""
+@Input() options:string|null = "";
+@Output() chartEvent = new EventEmitter<boolean>();
   constructor(private route: ActivatedRoute, private router: Router) {
 
   }
@@ -268,5 +269,9 @@ changeChart(){
   
   }
 
+  chartClicked(event: any, chart: any): void {
  
+    // Emit a boolean value to notify the parent component that the chart was clicked
+    this.chartEvent.emit(true);
+  }
 }

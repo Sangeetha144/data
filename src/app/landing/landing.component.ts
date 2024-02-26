@@ -9,16 +9,17 @@ import { ActivatedRoute } from '@angular/router';
 export class LandingComponent {
  
 
-  username!: string;
-  name!:string|null;
+  username!: string |null;
+ 
  
   constructor(private route: ActivatedRoute) {}
- 
+
   ngOnInit() {
-    this.route.queryParams.subscribe(params => {
-      this.username = params['username'];
+    // this.route.queryParams.subscribe(params => {
+    //   this.username = params['username'];
      
-    });
+    // });
+     this.username= sessionStorage.getItem('username')
   }
   
 }

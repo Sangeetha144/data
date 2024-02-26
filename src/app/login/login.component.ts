@@ -33,9 +33,10 @@ link:boolean= false;
     sessionStorage.setItem('loggedIn','true')
             // Retrieve the entered username
             const username = this.loginForm.get('username')?.value;
- 
+ sessionStorage.setItem('username',username)
             // Navigate to landing page with username as query parameter
-            this.router.navigate(['/landing'], { queryParams: { username: username } });
+            // this.router.navigate(['/landing'], { queryParams: { username: username } });
+            this.router.navigate(['/landing']);
     }     // Display error messages or take appropriate action
       
   }
