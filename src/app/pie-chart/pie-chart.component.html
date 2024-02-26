@@ -1,25 +1,15 @@
-<!-- <div class="container">
-    <apx-chart 
-      [series]="series" 
-      [chart]="details" 
-      [labels]="labels" 
-      [title]="title" 
-      [colors]="colors"
-      (click)="handleSliceClick($event)"
-      [annotations]="chartAnnotations"
-    >
-    </apx-chart>
-  </div>
-   -->
-   <div class="container">
-    <apx-chart 
-      [series]="series" 
-      [chart]="details" 
-      [labels]="labels" 
-      [title]="title" 
-      [colors]="colors"
-      [annotations]="chartAnnotations"
-    >
-    </apx-chart>
-  </div>
-  
+<div class="container">
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [labels]="chartOptions.labels"
+    [responsive]="chartOptions.responsive"
+    [colors]="chartOptions.colors"
+    [legend]="chartOptions.legend"
+    [dataLabels]="chartOptions.dataLabels"
+   
+    (click)="handleChartClick($event)"
+   
+  >
+  </apx-chart>
+</div>

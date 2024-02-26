@@ -50,7 +50,7 @@ export class LineChartComponent implements OnInit {
     }
   }
 changeChart(){
-  if(this.options === null){
+  if(this.options === 'No of Logins'){
     this.chartOptions = {
       series: [
         {
@@ -120,76 +120,7 @@ changeChart(){
       }
     };
   }
-  else if(this.options === 'No of Logins'){
-    this.chartOptions = {
-      series: [
-        {
-          name: "Users",
-          data: [10, 41, 55, 80, 49, 62, 69, 91, 148],
-          
-        }
-      ],
-      chart: {
-        type: 'area',
-        height: 350,
-        animations: {
-          enabled: true,
-          easing: 'easein',
-          speed: 800,
-          
-        },
-        toolbar: { // Add toolbar settings
-          show: true,
-          tools: { // Add tools property for customizing toolbar icons
-            download: false // Set to true to show the download icon
-            
-          }
-        },
-        zoom: {
-          enabled: true
-        }
-      },
-      dataLabels: {
-        enabled: true
-      },
-      stroke: {
-        curve: "smooth"
-      },
-      title: {
-        text: " ",
-        align: "left"
-      },
-      fill: {
-        colors: ['#008FFB'],
-        type: 'gradient',
-        gradient: {
-          shadeIntensity: 1,
-          opacityFrom: 0.7,
-          opacityTo: 0.9,
-          stops: [0, 100]
-        }
-      },
-      grid: {
-        row: {
-          colors: ["#f3f3f3", "transparent"],
-          opacity: 0.5
-        }
-      },
-      xaxis: {
-        categories: [
-          "8 AM",
-          "10 AM",
-          "12 PM",
-          "2 PM",
-          "4 PM",
-          "6 PM",
-          "8 PM",
-          "10 PM",
-          "12 AM"
-        ]
-      }
-    };
-  }
+ 
   else if(this.options === 'No of successful payment'){
     this.chartOptions = {
       series: [

@@ -53,10 +53,11 @@ export class CreatedbComponent {
   createDb()
   
   {
-    this.snackbar.open('Data has been created', 'Close', {
+    this.snackbar.open('Data has been created', '', {
       duration: 2000, // Duration in milliseconds
       horizontalPosition: 'right',
-      verticalPosition: 'top'
+      verticalPosition: 'top',
+      panelClass:['snackbar']
     });
   
     this.ref.close();

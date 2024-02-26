@@ -55,7 +55,7 @@ ngOnInit(): void {
   this.futureDateDisable();
 this.setDates();
 this.route.queryParams.subscribe(params => {
-  this.selectedslicename = params['slicename'];
+  this.selectedslicename = params['label'];
 
 })
 }

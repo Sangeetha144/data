@@ -1,4 +1,4 @@
- 
+
 #content {
     position: relative;
     background: linear-gradient(to top left, #ff9700 0%, #35afd7 57%);
@@ -6,7 +6,28 @@
     margin: 0;
     font-family: "Poppins", sans-serif;
     height: 584px;
+    overflow-x: hidden; /* Add this line to hide horizontal scrollbar */
 }
+
+.image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px; /* Adjust as needed */
+    overflow: hidden; /* Add this line to hide overflowing content */
+}
+
+.support {
+    position: absolute; /* Change to absolute positioning */
+    bottom: 0; /* Position at the bottom */
+    margin-left: 1200px;/* Position in the middle */
+    padding: 20px;
+    transform: translateX(-50%); /* Center horizontally */
+}
+
+
+
  
 .heading {
 
@@ -23,14 +44,7 @@ h1{
     letter-spacing: 2px;
     font-size: 16px;
  }
-.image {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 70px; /* Adjust as needed */
-}
- 
+
 img {
     height: 400px;
     width: 600px;
@@ -89,9 +103,3 @@ img {
     --mdc-plain-tooltip-supporting-text-color:black;
     
 } 
-
-.support{
-    position: relative;
-    top:-80px;
-    left:600px;
-}

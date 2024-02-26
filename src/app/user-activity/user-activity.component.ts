@@ -1,4 +1,4 @@
-
+ 
 import { Component, OnInit,ViewChild } from '@angular/core';
  
 import {
@@ -12,6 +12,17 @@ import {
   ApexTitleSubtitle
 } from "ng-apexcharts";
  
+export type ChartOptions = {
+  series: ApexAxisChartSeries;
+  chart: ApexChart;
+  dataLabels: ApexDataLabels;
+  plotOptions: ApexPlotOptions;
+  xaxis: ApexXAxis;
+  colors: string[];
+  legend: ApexLegend;
+  title: ApexTitleSubtitle;
+};
+ 
  
 @Component({
   selector: 'app-user-activity',
@@ -19,6 +30,7 @@ import {
   styleUrls: ['./user-activity.component.scss']
 })
 export class UserActivityComponent implements OnInit {
+  @ViewChild("chart") chart!:ChartComponent;
   isLoading: boolean = true;
   donutChart1Options: any = {
     series: [44, 55, 41],
@@ -32,21 +44,29 @@ export class UserActivityComponent implements OnInit {
     title: {
       text: 'Device Category'
     },
+    dataLabels: {
+      enabled: false
+    },
     labels: ['Desktop', 'Mobile', 'Others'],
     colors: ['#228B22', '#FFA500', '#A9A9A9'],
    
     plotOptions: {
       pie: {
-        customScale: 0.8, // Adjust the size of the donut
+        customScale: 1,
+       
+       
+        // Adjust the size of the donut
         dataLabels: {
-            offset: -10, // Position the labels inside the donut
-            minAngleToShowLabel: 10, // Show labels only when the angle is greater than 10 degrees
-            formatter: function (val: any) {
-                return `${val}%`; // Display percentage value
-            }
+          enabled: false,
+ 
+         
         }
     }
  
+    },
+    total: {
+      showAlways: true,
+      show: true
     },
     fill: {
       colors: ['#fff'] // Background color of the donut hole
@@ -69,7 +89,10 @@ export class UserActivityComponent implements OnInit {
     series: [30, 40, 45, 60],
     chart: {
       type: 'donut',
-    
+   
+    },
+    dataLabels: {
+      enabled: false
     },
     legend: {
       position: 'bottom',
@@ -82,94 +105,153 @@ export class UserActivityComponent implements OnInit {
     colors: ['#228B22', '#FF0000', '#FFA500', '#A9A9A9'] // corrected from colors2 to colors
   };
  
-  distributedTreemapOptions: any = {
-    series: [{
-      data: [
-        { x: 'Home', y: 800 },
-        { x: 'Documents', y: 300 },
-        { x: 'View access status', y: 300 },
-        { x: 'View health system', y: 600 },
-        { x: 'Documents', y: 400 },
-        { x: 'Appointment', y: 350 },
-        { x: 'Badging history', y: 200 },
-        { x: 'Payment', y: 300 }
-      ],
-      }],
-    chart: {
-      type: 'treemap',
-      height: '300',
-      width: '300'
-    },
-    title: {
-      text: 'Most visited screens'
-    },
-    colors: [
-      '#3B93A5',
-'#DB7093',
-      '#ADD8C7',
-      '#EC3C65',
-      '#CDD7B6',
-      '#C1F666',
-      '#D43F97',
-      '#1E5D8C',
-   
-    ],
-    plotOptions: {
-      treemap: {
-        distributed: true,
-        enableShades: false
-      }
-    }
-  };
+  TreemapChartOptions: any = {
  
-  funnelChartOptions: any = {
-    series: [
-      {
-        name: "Funnel Series",
-        data: [1380, 1100, 990, 880, 740, 548, 330, 200],
-      },
-    ],
-    chart: {
-      type: 'bar',
-      height: 300,
-    },
-    plotOptions: {
-      funnel: { // corrected from bar to funnel
-        borderRadius: 0,
-        horizontal: true,
-        barHeight: "80%",
-        isFunnel: true,
-      },
-    },
-    dataLabels: {
-      enabled: true,
-      formatter: function (val: any, opt: any) {
-        return opt.w.globals.labels[opt.dataPointIndex] + ':  ' + val;
-      },
-      dropShadow: {
-        enabled: true,
-      },
-    },
-    title: {
-      text: 'Functional flow',
-      align: 'left',
-    },
-    xaxis: {
-      categories: [
-        'Sourced',
-        'Screened',
-        'Assessed',
-        'HR Interview',
-        'Technical',
-        'Verify',
-        'Offered',
-        'Hired',
+   
+      series: [
+        {
+          data: [
+            {
+              x: "Home",
+              y: 118
+            },
+            {
+              x: "Documents",
+              y: 109
+            },
+            {
+              x: "View access status",
+              y: 124
+            },
+            {
+              x: "Appointment",
+              y: 55
+            },
+            {
+              x: "Search health system",
+              y: 84
+            },
+            {
+              x: "Badge history",
+              y: 31
+            },
+            {
+              x: "Documents",
+              y: 70
+            },
+            {
+              x: "View providers ",
+              y: 30
+            },
+            {
+              x: "Reps",
+              y: 44
+            }
+           
+          ]
+        }
       ],
-    },
-    legend: {
-      show: true,
-    },
-  };
+      legend: {
+        show: false
+      },
+      chart: {
+        height: 300,
+        type: "treemap"
+      },
+      title: {
+        text: "Most visited screens",
+        align: "left"
+      },
+      colors: [
+        "#3B93A5",
+        "#F7B844",
+        "#ADD8C7",
+        "#EC3C65",
+        "#CDD7B6",
+        "#C1F666",
+        "#D43F97",
+        "#1E5D8C",
+        "#421243",
+        "#7F94B0",
+        "#EF6537",
+        "#C0ADDB"
+      ],
+      plotOptions: {
+        treemap: {
+          distributed: true,
+          enableShades: false
+        }
+      }
+    };
+ 
+ 
+  public generateData(count: number, yrange: { max: number; min: number; }) {
+    var i = 0;
+    var series = [];
+    while (i < count) {
+      var x = "w" + (i + 1).toString();
+      var y =
+        Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+ 
+      series.push({
+        x: x,
+        y: y
+      });
+      i++;
+    }
+    return series;
+  }
+ 
+ 
+ 
+    funnelChartOptions : any= {
+      series: [
+        {
+          name: "Funnel Series",
+          data: [1380, 1100, 830, 580, 240, ]
+        }
+      ],
+      chart: {
+        type: "bar",
+        height: 300,
+        width: 300
+      },
+      plotOptions: {
+        bar: {
+          borderRadius: 0,
+          horizontal: true,
+          barHeight: "80%",
+          isFunnel: true
+        }
+      },
+      dataLabels: {
+        enabled: true,
+        formatter: function (val: string, opt: { w: { globals: { labels: { [x: string]: string; }; }; }; dataPointIndex: string | number; }) {
+          return opt.w.globals.labels[opt.dataPointIndex] + ":  " + val;
+        },
+        dropShadow: {
+          enabled: true
+        }
+      },
+      title: {
+        text: "Functional flow",
+        align: "center"
+      },
+      xaxis: {
+        categories: [
+          "Search Health system",
+          "Membership",
+          "Service Package",
+          "Billing Info",
+          "Payment"
+         
+        ]
+      },
+      legend: {
+        show: false
+      }
+    };
+ 
  
   heatmapChartOptions: any = {
    // Define heatmap chart options here
@@ -225,7 +307,7 @@ export class UserActivityComponent implements OnInit {
         {
           name: 'Accounts',
           data: [
-            { x: 'Mon', y: 45 },
+            { x: 'Mon', y: 35 },
             { x: 'Tue', y: 25 },
             { x: 'Wed', y: 30 },
             { x: 'Thu', y: 35 },
@@ -268,9 +350,8 @@ export class UserActivityComponent implements OnInit {
  
   ngOnInit(): void {
     setTimeout(() => {
-      this.isLoading = false; // Hide loading icon after 2 seconds
+      this.isLoading = false;
     }, 1000);
  
   }
 }
- 

@@ -130,3 +130,7 @@ font-size: 13px;
   --mdc-protected-button-container-color:grey !important;
   --mdc-protected-button-label-text-color:white !important;
 }
+::ng-deep .snackbar  {
+  --mdc-snackbar-container-color: green !important;
+ }
+ 
