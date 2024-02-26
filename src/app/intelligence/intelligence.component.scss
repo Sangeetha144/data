@@ -7,10 +7,15 @@
 .slicename{
     margin-left: 45px;
     margin-top: 20px;
-    color:rgb(7, 18, 76);
-
-    text-shadow: 1px 2px 3px rgba(158, 153, 172, 0.8);
+    color:rgb(5, 63, 121);
+display: flex;
+  justify-content: space-between;  
+  padding-right: 50px;
     
+}
+.slicename h1{
+    position: relative;
+    top:18px;
 }
 .con{
     position: relative;
