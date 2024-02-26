@@ -1,17 +1,70 @@
 .full{
   font-family: "Poppins", sans-serif;
   display: flex;
+  width:100%;
+  overflow-x: hidden;
 }
 .card-container {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 20px;
+  width:16%;
 
 }
+.date{
+  display: flex;
+ gap:20px;
+}
+.btn-group{
+display: flex;
+gap:20px;
+margin: 10px;
+}
+.btn-group button{
+  width:100px;
+}
+.content-container{
+  width:80%;
+  margin: 10px;
+  
+}
+
 .parent{
   display: flex;
-  justify-content: end;
+  
 }
+.middle{
+  display: flex;
 
+  width:100%;
+  height:300px;
+
+  justify-content:space-evenly;
+}
+.pie,.empty{
+  width:47%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.con{
+  width:100%;
+  padding: 10px;
+}
+.top{
+  display:flex;
+  padding: 10px;
+justify-content: flex-end;
+  gap:10px;
+}
+.last{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.one,.two,.three{
+  width:30%;
+  height:300px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
     
     .example-card {
       width:200px;
