@@ -1,6 +1,6 @@
 <div class="slicename">
   <h1>{{selectedslicename}}</h1>
-  <button mat-raised-button color="primary"><mat-icon>home</mat-icon>Back to Home</button>
+ <a routerLink="/landing"><button mat-raised-button color="primary"><mat-icon>home</mat-icon>Back to Home</button></a> 
 </div>
 <div class="con">
 
@@ -79,11 +79,51 @@
       </mat-form-field>
     </div>
 
-    <button mat-raised-button color="primary" (click)="onSubmit()">
-      Submit
-    </button>
 
-    <button mat-raised-button  color="warn" (click)="clearAll()" >Clear </button>
+    <div class="btn-group">
+      <button mat-raised-button color="primary" (click)="onSubmit()" style="width:100px"><mat-icon >filter_alt</mat-icon>Apply</button>
+      <button mat-raised-button  color="warn" (click)="clearAll()" ><mat-icon >clear</mat-icon>Clear </button>
+      <mat-menu #exportMenu="matMenu">
+        <button mat-menu-item >Export as PDF</button>
+        <button mat-menu-item >Export as Excel</button>
+      </mat-menu>
+      
+      <button mat-raised-button color="primary" [matMenuTriggerFor]="exportMenu">
+        <mat-icon>arrow_drop_down</mat-icon>Export
+      </button>
+      
+    </div>
+  </div>
+  <div class="full">
+    <div class="card-container">
+      <mat-card class="example-card1">
+        <p class="user">Active Users</p>
+       
+        <mat-card-content class="c1">
+          <img src="/assets/cardimg/Group 399.png" height="45px" width="45px">
+          <span class="number">1000</span>
+         
+        </mat-card-content>
+      </mat-card>
+     
+      <mat-card class="example-card2">
+        <p class="Fup">Product Utilization %</p>
+        <mat-card-content class="c3">
+          <img src="/assets/cardimg/Group 422.png" height="45px" width="45px">
+          <span class="number1">58.60%</span>
+       
+        </mat-card-content>
+      </mat-card>
+     
+      <mat-card class="example-card3">
+        <p class="Alt">App Loading time</p>
+        <mat-card-content class="c5">
+          <img src="/assets/cardimg/Vector.png" height="45px" width="45px">
+          <span class="number2">100 ms</span>
+        
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
 
   <div *ngIf="!submitted">

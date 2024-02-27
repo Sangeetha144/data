@@ -1,5 +1,5 @@
 import { Component ,OnInit, ViewChild } from '@angular/core';
-import { TileService } from '../Services/tile.service';
+import { TileService } from '../../../../Services/tile.service';
 import { FormControl } from '@angular/forms';
 import { MatDatepickerInput, MatDatepickerInputEvent } from '@angular/material/datepicker';
 @Component({

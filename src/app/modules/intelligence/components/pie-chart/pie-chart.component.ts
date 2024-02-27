@@ -62,7 +62,7 @@ export class PieChartComponent  {
  
   redirectToIntelligenceComponent(label: string) {
     // Redirect to intelligence component passing label as a query parameter
-    window.location.href = `intelligence?label=${encodeURIComponent(label)}`;
+    window.location.href = `intelligence/intelligence?label=${encodeURIComponent(label)}`;
   }
  
   handleChartClick(event: any) {

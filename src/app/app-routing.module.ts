@@ -1,14 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { PieChartComponent } from './pie-chart/pie-chart.component';
 import { LandingComponent } from './landing/landing.component';
-import { LineChartComponent } from './line-chart/line-chart.component';
 import { ButtonComponent } from './button/button.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { IntelligenceComponent } from './intelligence/intelligence.component';
-import { TileComponent } from './tile/tile.component';
-import { UserActivityComponent } from './user-activity/user-activity.component';
 
 
 const routes: Routes = [
@@ -21,10 +16,7 @@ const routes: Routes = [
     path : 'landing',
     component : LandingComponent
   },
-  {
-    path : 'line-chart',
-     component : LineChartComponent
-   },
+ 
    {
     path:'login',
     component:LoginComponent
@@ -35,16 +27,9 @@ const routes: Routes = [
    },
    {
     path:'intelligence',
-    component:IntelligenceComponent 
+    loadChildren:()=>import('./modules/intelligence/intelligence.module').then(x=>x.IntelligenceModule)
    },
-   {
-    path:'tile',
-    component:TileComponent
-   },
-   {
-    path:'user-activity',
-    component:UserActivityComponent
-   },
+  
  {
   path:'fabric',
   loadChildren:()=> import('./modules/fabric/fabric.module').then(x=>x.FabricModule)
