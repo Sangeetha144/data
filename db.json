@@ -1,141 +1,144 @@
 {
   "customer": [
     {
-      "id": "1",
-      "name": "Akila",
-      "email": "akila@in.com"
+      "firstName": "John",
+      "lastName": "D",
+      "email": "john@in.com"
     },
     {
-      "id": "2",
-      "name": "Reshma",
-      "email": "reshma@in.com"
+      "firstName": "David",
+      "lastName": "J",
+      "email": "david@in.com"
     },
     {
-      "id": "3",
-      "name": "Sangeetha",
+      "firstName": "Jenni",
+      "lastName": "J",
       "email": "sangeetha@in.com"
     },
     {
-      "id": "4",
-      "name": "Ratchu",
+      "firstName": "Ratchu",
+      "lastName": "S",
       "email": "ratchu@in.com"
     },
     {
-      "id": "5",
-      "name": "Deepa",
+      "firstName": "Deepa",
+      "lastName": "S",
       "email": "Deepa@in.com"
     },
     {
-      "id": "6",
-      "name": "Chibi",
+      "firstName": "Chibi",
+      "lastName": "V",
       "email": "chib@in.com"
     },
     {
-      "id": "7",
-      "name": "Peter",
+      "firstName": "Peter",
+      "lastName": "T",
       "email": "peter@in.com"
     },
     {
-      "id": "8",
-      "name": "Kanmani",
+      "firstName": "Kanmani",
+      "lastName": "M",
       "email": "kanmani@in.com"
     },
     {
-      "id": "9",
-      "name": "kaushika",
+      "firstName": "kaushika",
+      "lastName": "J",
       "email": "kaushika@in.com"
     },
     {
-      "id": "10",
-      "name": "Harini",
+      "firstName": "Harini",
+      "lastName": "P",
       "email": "harini@in.com"
     },
     {
-      "id": "11",
-      "name": "Anu",
+      "firstName": "Anu",
+      "lastName": "K",
       "email": "anu@in.com"
     },
     {
-      "id": "12",
-      "name": "yuwin",
+      "firstName": "yuwin",
+      "lastName": "R",
       "email": "yuwin@in.com"
     },
     {
-      "id": "13",
-      "name": "jannani",
+      "firstName": "jannani",
+      "lastName": "V",
       "email": "janani@in.com"
     },
     {
-      "id": "14",
-      "name": "lakshmi",
+      "firstName": "lakshmi",
+      "lastName": "I",
       "email": "lakshmi@in.com"
     },
     {
-      "id": "15",
-      "name": "Priya",
+      "firstName": "Priya",
+      "lastName": "A",
       "email": "priya@in.com"
     },
     {
-      "id": "16",
-      "name": "Raji",
+      "firstName": "Raji",
+      "lastName": "G",
       "email": "raji@in.com"
     },
     {
-      "id": "17",
-      "name": "Meera",
+      "firstName": "Meera",
+      "lastName": "C",
       "email": "meera@in.com"
     },
     {
-      "id": "18",
-      "name": "Hari",
+      "firstName": "Hari",
+      "lastName": "S",
       "email": "hari@in.com"
     },
     {
-      "id": "19",
-      "name": "Arun",
+      "firstName": "Arun",
+      "lastName": "V",
       "email": "arun@in.com"
     },
     {
-      "id": "20",
-      "name": "Karthi",
+      "firstName": "Karthi",
+      "lastName": "P",
       "email": "karthi@in.com"
     },
     {
-      "id": "21",
-      "name": "Kathir",
+      "firstName": "Kathir",
+      "lastName": "Nr",
       "email": "kathir@in.com"
     },
     {
-      "id": "22",
-      "name": "Ganesh",
+      "firstName": "Ganesh",
+      "lastName": "G",
       "email": "ganesh@in.com"
     },
     {
-      "id": "23",
-      "name": "Sathya",
+      "firstName": "Sathya",
+      "lastName": "V",
       "email": "sathya@in.com"
     },
     {
-      "id": "24",
-      "name": "Pooja",
+      "firstName": "Pooja",
+      "lastName": "C",
       "email": "pooja@in.com"
     },
     {
-      "id": "25",
-      "name": "Bharathi",
+      "firstName": "Bharathi",
+      "lastName": "A",
       "email": "bharathi@in.com"
     },
     {
-      "id": "26",
-      "name": "Mani",
+      "firstName": "Mani",
+      "lastName": "P",
       "email": "mani@in.com"
     },
     {
-      "id": "27",
-      "name": "Nithya",
+      "firstName": "Nithya",
+      "lastName": "V",
       "email": "nithya@in.com"
     }
   ],
+
+
+
   "user": [
     {
       "activeUser": "1000",
