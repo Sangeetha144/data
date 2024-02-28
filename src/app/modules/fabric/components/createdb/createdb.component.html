@@ -21,7 +21,7 @@
                   
                 <div *ngIf="creatingCustomRole; else customRoleButton" style="display: flex;gap:8px">
                     <mat-form-field class="example-full-width" appearance="outline">
-                        <mat-label>Create custom Role</mat-label>
+                        <mat-label class="custom-form-field">Create custom Role</mat-label>
                         <input matInput formControlName="customRole" placeholder="Enter custom role">
                     </mat-form-field>
                     <button mat-raised-button style="background-color: black;" (click)="addCustomRole()">Add</button>
