@@ -3,6 +3,7 @@
 
 
 
+
  <div class="full">
   <div  class="card-container" >
     <mat-card class="example-card1">
@@ -53,69 +54,84 @@
 </mat-card> -->
   </div>
   <div class="content-container">
+      
+
     <div class="top">
-      <div class="date">
-        <mat-form-field class="example-form-field" style="width: 200px" appearance="outline">
-          <mat-label>From</mat-label>
-          <input
-            matInput
-            [matDatepicker]="fromDatePicker"
-            placeholder="From date"
-            name="fromDate"
-            [max]="maxDate"
-            [value]="yesterdayDate.toISOString().split('T')[0]"
-            (dateChange)="addEvent('change', $event)"
-            class="input"
-          />
-          <mat-datepicker-toggle
-            matSuffix
-            [for]="fromDatePicker"
-          ></mat-datepicker-toggle>
-          <mat-datepicker #fromDatePicker></mat-datepicker>
-        </mat-form-field>
-  
-        <mat-form-field class="example-form-field" style="width: 200px" appearance="outline">
-          <mat-label>To</mat-label>
-          <input
-            matInput
-            [matDatepicker]="toDatePicker"
-            placeholder="To date"
-            name="toDate"
-            [min]="minDate"
-            [value]="date.value"
-            [max]="maxDate"
-          />
-          <mat-datepicker-toggle
-            matSuffix
-            [for]="toDatePicker"
-            class="date"
-          ></mat-datepicker-toggle>
-          <mat-datepicker #toDatePicker></mat-datepicker>
-        </mat-form-field>
-      </div> 
-      <div class="btn-group">
-        <button mat-raised-button color="primary"><mat-icon>filter_alt</mat-icon>Apply</button>
-        <button mat-raised-button  color="warn" (click)="clearAll()" ><mat-icon>clear</mat-icon>Clear </button>
-        <mat-menu #exportMenu="matMenu">
-          <button mat-menu-item >Export as PDF</button>
-          <button mat-menu-item >Export as Excel</button>
-        </mat-menu>
-        
-        <button mat-raised-button color="primary" [matMenuTriggerFor]="exportMenu">
-          <mat-icon>arrow_drop_down</mat-icon>Export
-        </button>
-        
+      <div class="1">
+        <div class="example-button-container">
+          <a routerLink="/landing">
+          <button mat-raised-button color="primary" style="padding: 0px; margin-top: 10px;">
+            <mat-icon style="font-size:15px ;">arrow_back</mat-icon>
+            <mat-icon >home</mat-icon>
+          </button>
+          </a>
+        </div>
       </div>
+      <div class="top2">
+        <div class="date">
+          <mat-form-field class="example-form-field" style="width: 200px" appearance="outline">
+            <mat-label>From</mat-label>
+            <input
+              matInput
+              [matDatepicker]="fromDatePicker"
+              placeholder="From date"
+              name="fromDate"
+              [max]="maxDate"
+              [value]="yesterdayDate.toISOString().split('T')[0]"
+              (dateChange)="addEvent('change', $event)"
+              class="input"
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="fromDatePicker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #fromDatePicker></mat-datepicker>
+          </mat-form-field>
+    
+          <mat-form-field class="example-form-field" style="width: 200px" appearance="outline">
+            <mat-label>To</mat-label>
+            <input
+              matInput
+              [matDatepicker]="toDatePicker"
+              placeholder="To date"
+              name="toDate"
+              [min]="minDate"
+              [value]="date.value"
+              [max]="maxDate"
+            />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="toDatePicker"
+              class="date"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #toDatePicker></mat-datepicker>
+          </mat-form-field>
+        </div> 
+        <div class="btn-group">
+          <button mat-raised-button color="primary"><mat-icon>filter_alt</mat-icon>Apply</button>
+          <button mat-raised-button  color="warn" (click)="clearAll()" ><mat-icon>clear</mat-icon>Clear </button>
+          <mat-menu #exportMenu="matMenu">
+            <button mat-menu-item >Export as PDF</button>
+            <button mat-menu-item >Export as Excel</button>
+          </mat-menu>
+          
+          <button mat-raised-button color="primary" [matMenuTriggerFor]="exportMenu">
+            <mat-icon>arrow_drop_down</mat-icon>Export
+          </button>
+          
+        </div>
+      </div>
+  
     </div>
    <div class="middle">
     <div class="pie">
       <app-pie-chart></app-pie-chart>
     </div>
-    <div class="empty">
+    <!-- <div class="empty">
     
-    </div>
+    </div> -->
    </div>
-   <div class="last">
+   <!-- <div class="last">
     <div class="one" >
     
     </div>
@@ -126,7 +142,7 @@
     
     </div>
    </div>
-   
+    -->
 
   </div>
 

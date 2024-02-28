@@ -36,13 +36,13 @@ margin: 10px;
   display: flex;
 
   width:100%;
-  height:330px;
-
+  height:330px;  
   justify-content:space-evenly;
 }
 .pie,.empty{
-  width:47%;
+  width:48%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  overflow: hidden;
 }
 .con{
   width:100%;
@@ -50,9 +50,12 @@ margin: 10px;
 }
 .top{
   display:flex;
-  padding: 10px;
-justify-content: flex-end;
-  gap:10px;
+ padding: 10px;
+justify-content: space-between;
+  
+}
+.top2{
+  display:flex;
 }
 .last{
   display: flex;
@@ -175,4 +178,11 @@ padding:5px;
     }
     mat-card-content img{
       padding-left: 15px;
+    }
+
+    .mat-mini-fab-increased {
+      width: 55px;
+      height: 50px;
+      line-height: 28px;
+      font-size: 28px;
     }
