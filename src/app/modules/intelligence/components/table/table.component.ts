@@ -14,7 +14,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class TableComponent {
   customerlist!: Customer[];
   dataSource: any;
-  displayedColumns: string[] = ["code", "name", "email", "details"];
+  displayedColumns: string[] = ["firstName", "lastName", "email", "details"]; // Update displayedColumns
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
  
@@ -41,4 +41,3 @@ export class TableComponent {
     this.dataSource.filter = value.trim().toLowerCase();
   }
 }
- 
