@@ -5,17 +5,16 @@
   
 }
 .slicename{
-    margin-left: 45px;
-    margin-top: 20px;
-    color:#014881;
-display: flex;
-  justify-content: space-between;  
-  padding-right: 50px;
+    margin-left: 21px;
+    margin-top: 15px;
+   
+
     
 }
-.slicename h1{
-    position: relative;
-    top:18px;
+h1{
+   
+    color:#014881;
+   padding:5px;
    font-weight: bold;
 }
 .con{
@@ -27,24 +26,22 @@ display: flex;
 }
 button{
     margin-top: 10px;
+    
 }
 .spin{
     margin-left:600px;
     margin-top: 100px;
 }
-.icon{
-    margin-left: -30px;
-
-   
-    }
+.icon {
+  position: absolute;
+  top: calc(50% - 12px); /* Adjust this value according to your icon size */
+  right: -1px; /* Adjust this value as needed */
+  color:grey;
+}
     mat-form-field{
         height:70px;
     }
-.iconn{
-        font-size: 20px;
-        margin-top: -10px;
-        
-    }
+
     .date{
         display: flex;
         gap:3%;
@@ -63,7 +60,7 @@ button{
         padding: 5px;
        
        }
-       
+    
          .Fup{
       background-color: #EFF4F5;
       font-weight: 550;
@@ -78,7 +75,7 @@ button{
      
           .example-card1 {
             width:250px;
-            height: 100px;
+            height: 95px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             margin-bottom: 20px;
             margin-left: 100px;
@@ -88,23 +85,14 @@ button{
          
           .example-card2 {
             width:250px;
-            height: 100px;
+            height: 95px;
             box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
             margin-bottom: 20px;
          margin-left: 100px;
             background-color: #90B3BD
           }
          
-          .example-card3 {
-            width:250px;
-            height: 100px;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            margin-bottom: 20px;
-         margin-left: 100px;
-           background-color:#47C2DA
-          }
-         
-           
+    
          
          
          
@@ -112,7 +100,7 @@ button{
             .number {
                 margin-left: 50px;
                 font-weight: 550;
-                font-size: 28px;
+                font-size: 30px;
                 color: white;
                 position: absolute;
                 top: 50px;
@@ -121,34 +109,28 @@ button{
               .number1 {
                 margin-left: 50px;
                 font-weight: 550;
-                font-size: 20px;
+                font-size: 30px;
                 color: white;
              
               position: absolute;
-              top: 50px;
+              top: 52px;
          
            
               }
-              .number2 {
-                margin-left: 50px;
-                font-weight: 550;
-                font-size: 20px;
-                color: white;
-             
-              position: absolute;
-              top: 50px;
-         
-           
-              }
+ 
       
       .mat-mdc-raised-button.mat-warn{
         --mdc-protected-button-container-color:grey !important;
         --mdc-protected-button-label-text-color:white !important;
-        width:95px;
+
+     
       }  
+
+
+  
       .btn-group{
         display: flex;
-     gap:3%;
+     gap:5%;
      margin-left: 20px;
      
       }  

@@ -160,7 +160,8 @@ export class UserActivityComponent implements OnInit {
       },
       title: {
         text: "Most visited screens",
-        align: "left"
+        align: "left",
+       
       },
       colors: [
         "#3B93A5",

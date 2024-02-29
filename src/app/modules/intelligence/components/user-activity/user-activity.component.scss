@@ -3,6 +3,8 @@
     display: flex;
     margin-top:30px;
     font-family: "Poppins", sans-serif;
+    overflow: hidden; 
+    background-color: ;
  
 }
 #donutchart1{
@@ -41,13 +43,14 @@ h3{
     height: 200px;
     width: 200px;
     position: relative;
+    
     right: -15px;
 
 }
   .ch1{
     height: 300px;
     width: 313px;
-    
+    background-color: white;
     position: relative;
     right: -130px;
   
@@ -57,16 +60,18 @@ h3{
     width: 313px;
     position: relative;
     right: -260px;
+    background-color: white;
   
   }
   .funnel{
-  
+    background-color: white;
     height: 300px;
     margin-left: 390px;
   }
   #heatmap-chart{
 margin-left: 50px;
 margin-top: 15px;
+
   }
 .loading-spinner-container{
   position: relative;
