@@ -101,9 +101,12 @@
           <button mat-menu-item >Export as Excel</button>
         </mat-menu>
         
-        <button mat-raised-button color="primary" [matMenuTriggerFor]="exportMenu">
-          <mat-icon>arrow_drop_down</mat-icon>Export
-        </button>
+         <button mat-raised-button color="primary" [matMenuTriggerFor]="exportMenu" class="custom-button">
+          <span mat-line class="custom-span">Export</span>
+          <mat-icon class="custom-icon">arrow_drop_down</mat-icon>
+        </button> 
+        
+        
         
       </div>
     </div>

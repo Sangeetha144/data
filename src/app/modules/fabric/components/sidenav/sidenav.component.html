@@ -16,22 +16,17 @@
 
         <mat-icon class="custom-icon homeu">home</mat-icon>
 
-        <span mat-line class="custom-span custom-span-bold">Home</span>
+        <span mat-line class="custom-span custom-span-bold mine">Home</span>
 
       </a>
 
       <div class="data-share-container">
-
         <a mat-list-item (click)="toggleDataShareMenu()" class="custom-nav-item" routerLink="/fabric/">
-
           <mat-icon class="custom-icon shareu">database</mat-icon>
-
           <span mat-line class="custom-span custom-span-bold custom-white">Data Share</span>
-
-          <mat-icon class="custom-icon"> expand_more</mat-icon> 
-
+          <mat-icon class="custom-icon thank">expand_more</mat-icon>
         </a>
-
+        
       </div><br>
 
       <div *ngIf="dataShareMenuOpen" class="custom-submenu">

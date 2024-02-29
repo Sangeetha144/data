@@ -258,7 +258,7 @@
   }
   .custom-partner-icon {
     font-size: 16px;
-    vertical-align: middle; /* Adjust the font size as needed */
+    vertical-align: middle; 
   }
   .data-share-container {
     margin-left: auto;
@@ -285,6 +285,15 @@
         color: white; 
        
       }
+      .thank{
+        margin-left: 30px;
+        color: white;
+      }
+      .custom-nav-item:hover .custom-span,
+.custom-nav-item:hover .custom-icon {
+  color: black;
+}
+
       
  
  
