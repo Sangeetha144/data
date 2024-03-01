@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/material.module';
 import { IntelligentComponent } from './intelligent.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
+
 const routes: Routes = [
   {
     path : '',
@@ -43,7 +44,8 @@ const routes: Routes = [
     TileComponent,
     IntelligenceComponent,
     TableComponent,
-    IntelligentComponent 
+    IntelligentComponent,
+    
   ],
   imports: [
     CommonModule,

@@ -131,8 +131,25 @@ button{
       .btn-group{
         display: flex;
      gap:5%;
-     margin-left: 20px;
+     margin-left: 10px;
      
-      }  
-      
-      
+      }
+      .export{
+        position: relative;
+        left: 55px;
+      }
+      .part{
+        position: relative;
+        left: -18px;
+       
+      }
+.item
+      {
+    margin: 0px;
+      }
+      .mat-mdc-menu-item{
+        min-height: 25px;
+       padding-right: 5px !important;
+     
+      }
+     

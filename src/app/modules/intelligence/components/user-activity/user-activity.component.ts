@@ -215,7 +215,7 @@ export class UserActivityComponent implements OnInit {
       chart: {
         type: "bar",
         height: 300,
-        width: 300
+        width: 280
       },
       plotOptions: {
         bar: {

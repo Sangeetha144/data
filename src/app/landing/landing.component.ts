@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
@@ -12,7 +12,7 @@ export class LandingComponent {
   username!: string |null;
  
  
-  constructor(private route: ActivatedRoute) {}
+  constructor(private router:Router) {}
 
   ngOnInit() {
     // this.route.queryParams.subscribe(params => {
@@ -21,7 +21,11 @@ export class LandingComponent {
     // });
      this.username= sessionStorage.getItem('username')
   }
-  
+  logout(){
+    this.router.navigate([''])
+   sessionStorage.removeItem('loggedIn');
+   sessionStorage.removeItem('username')
 }
 
 
+}

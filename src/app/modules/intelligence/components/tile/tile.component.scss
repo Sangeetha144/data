@@ -44,6 +44,9 @@ margin: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   overflow: hidden;
 }
+.pie{
+  margin-right: 78px;
+}
 .con{
   width:100%;
   padding: 10px;
@@ -185,4 +188,13 @@ padding:5px;
       height: 50px;
       line-height: 28px;
       font-size: 28px;
+    }
+    .export{
+      position: relative;
+      left: 60px;
+    }
+    .part{
+      position: relative;
+      left: -20px;
+     
     }

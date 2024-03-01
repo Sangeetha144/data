@@ -1,12 +1,32 @@
 
 <div id="content">
+   <mat-toolbar class="header">
+
+      <div class="logo-container" >
+        <a routerLink="/landing"> 
+        <img src="/assets/logos/logo.png" width="165px" />
+        </a>
+      </div>
+      <div class="right-nav">
+      
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon style="color:white">account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            <span>Logout</span>
+          </button>
+        </mat-menu>
+      </div>
+    </mat-toolbar>
    <div class="heading">
       <h1>Hello, {{username}}! What's Up for the day?</h1>
        <p>Welcome to the Data Universe Platform! Explore our tailored offerings </p>
        <p>constituting to your imperative data requirements without missing a beat</p>
    </div>
    <div class="image">
-       <img src="/assets/landingimages/Group 240.png">
+       <img src="/assets/landingimages/Group 520.png">
        <a routerLink="/intelligence/tile"><div id="intelligence" class="icon" 
          #tooltip="matTooltip"
          matTooltip="DataIntelligence is a functionality helps to track single user activities"

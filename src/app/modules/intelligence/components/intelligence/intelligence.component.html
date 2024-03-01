@@ -83,13 +83,13 @@
     <div class="btn-group">
       <button mat-raised-button color="primary" (click)="onSubmit()" style="width:108px" ><mat-icon class="btn-icon">filter_alt</mat-icon>Apply</button>
       <button mat-raised-button  color="warn" (click)="clearAll()" style="width:108px"  ><mat-icon class="btn-icon" >clear</mat-icon>Clear </button>
-      <mat-menu #exportMenu="matMenu">
-        <button mat-menu-item >Export as PDF</button>
-        <button mat-menu-item >Export as Excel</button>
+      <mat-menu #exportMenu="matMenu" class="menu">
+        <button mat-menu-item class="item" > Pdf</button>
+        <button mat-menu-item  class="item" >Excel</button>
       </mat-menu>
       
-      <button mat-raised-button color="primary" [matMenuTriggerFor]="exportMenu" style="width:108px" >
-        <mat-icon class="btn-icon">arrow_drop_down</mat-icon>Export
+      <button mat-raised-button color="primary" [matMenuTriggerFor]="exportMenu" style="width:108px"  class="export-button">
+        <span class="part">Export</span> <mat-icon class="export">arrow_drop_down</mat-icon>
       </button>
       
     </div>

@@ -1,6 +1,6 @@
 <div class="container">
   <h2 style="margin-left: 20px;margin-top: 3px;">Products Used</h2>
-  <apx-chart
+  <apx-chart 
     [series]="chartOptions.series"
     [chart]="chartOptions.chart"
     [labels]="chartOptions.labels"
@@ -8,7 +8,7 @@
     [colors]="chartOptions.colors"
     [legend]="chartOptions.legend"
     [dataLabels]="chartOptions.dataLabels"
-   
+    class="ch"
     (click)="handleChartClick($event)"
    
   >

@@ -60,9 +60,8 @@
       <div class="1">
         <div class="example-button-container">
           <a routerLink="/landing">
-          <button mat-raised-button color="primary" style="padding: 0px; margin-top: 10px;">
-            <mat-icon style="font-size:15px ;">arrow_back</mat-icon>
-            <mat-icon >home</mat-icon>
+          <button mat-raised-button color="primary" style="padding: 10px; margin-top: 10px;">
+            <mat-icon style="position: relative; top:-2px;" >home</mat-icon>Back to Home
           </button>
           </a>
         </div>
@@ -111,12 +110,12 @@
           <button mat-raised-button color="primary"><mat-icon>filter_alt</mat-icon>Apply</button>
           <button mat-raised-button  color="warn" (click)="clearAll()" ><mat-icon>clear</mat-icon>Clear </button>
           <mat-menu #exportMenu="matMenu">
-            <button mat-menu-item >Export as PDF</button>
-            <button mat-menu-item >Export as Excel</button>
+            <button mat-menu-item >Pdf</button>
+            <button mat-menu-item >Excel</button>
           </mat-menu>
           
-          <button mat-raised-button color="primary" [matMenuTriggerFor]="exportMenu">
-            <mat-icon>arrow_drop_down</mat-icon>Export
+          <button mat-raised-button color="primary" [matMenuTriggerFor]="exportMenu" class="export-button">
+            <span class="part">Export</span> <mat-icon class="export">arrow_drop_down</mat-icon>
           </button>
           
         </div>
